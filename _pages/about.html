@@ -4,604 +4,115 @@ title: Youngseon Kim | AI Research & Engineering
 permalink: /
 ---
 
-<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Youngseon Kim · AI Research & Engineering</title>
-  <meta name="description" content="김영선 · 중앙대학교 컴퓨터공학 석사과정. Multimodal AI, AI for Sports, Retrieval-Augmented Generation 연구 포트폴리오." />
-  <meta property="og:title" content="Youngseon Kim · AI Research & Engineering" />
-  <meta property="og:description" content="Multimodal AI, AI for Sports, RAG, and video understanding." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thsu1084.github.io/" />
-  <link rel="canonical" href="https://thsu1084.github.io/" />
-
-  <style>
-    :root{
-      --ink:#191f28;
-      --muted:#667384;
-      --blue:#2463eb;
-      --line:#e8edf3;
-      --pale:#f6f8fb;
-      --max:1080px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{
-      margin:0;
-      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
-      color:var(--ink);
-      background:#fff;
-      line-height:1.72;
-      word-break:keep-all;
-    }
-    a{color:inherit;text-decoration:none}
-    a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-    header{
-      position:sticky;
-      top:0;
-      z-index:20;
-      background:rgba(255,255,255,.96);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      max-width:var(--max);
-      margin:auto;
-      padding:18px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-    .brand{
-      font-size:15px;
-      font-weight:800;
-      letter-spacing:-.4px;
-    }
-    .brand span{color:var(--blue)}
-    nav{
-      display:flex;
-      gap:24px;
-      align-items:center;
-      font-size:13px;
-      font-weight:650;
-    }
-    nav a:hover{color:var(--blue)}
-    main{
-      max-width:var(--max);
-      margin:auto;
-      padding:0 24px 72px;
-    }
-    .hero{
-      display:grid;
-      grid-template-columns:minmax(0,1.5fr) 250px;
-      gap:72px;
-      align-items:center;
-      padding:86px 0 72px;
-    }
-    .eyebrow{
-      margin:0 0 14px;
-      color:var(--blue);
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:1.8px;
-      text-transform:uppercase;
-    }
-    h1{
-      margin:0 0 20px;
-      font-size:clamp(38px,5vw,58px);
-      line-height:1.18;
-      letter-spacing:-2.5px;
-    }
-    h1 em{font-style:normal;color:var(--blue)}
-    .intro{
-      max-width:620px;
-      margin:0;
-      color:var(--muted);
-      font-size:16px;
-    }
-    .identity{
-      margin:24px 0 0;
-      font-size:14px;
-      color:var(--muted);
-    }
-    .identity strong{
-      color:var(--ink);
-      display:block;
-      font-size:18px;
-      margin-bottom:2px;
-    }
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:26px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:42px;
-      padding:0 16px;
-      border-radius:9px;
-      background:var(--pale);
-      font-size:13px;
-      font-weight:750;
-    }
-    .btn.primary{background:var(--blue);color:#fff}
-    .profile{
-      width:100%;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:7px;
-      box-shadow:0 14px 38px rgba(35,48,74,.08);
-      background:#fff;
-    }
-    .profile img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:12px;
-    }
-
-    .quick{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:0;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-    .quick-item{
-      padding:20px 20px 20px 0;
-    }
-    .quick-item + .quick-item{
-      padding-left:24px;
-      border-left:1px solid var(--line);
-    }
-    .quick strong{
-      display:block;
-      font-size:14px;
-      margin-bottom:2px;
-    }
-    .quick span{
-      color:var(--muted);
-      font-size:12px;
-    }
-
-    section{
-      padding:68px 0;
-      border-bottom:1px solid var(--line);
-    }
-    .section-title{
-      display:grid;
-      grid-template-columns:160px 1fr;
-      gap:30px;
-      margin-bottom:30px;
-      align-items:start;
-    }
-    .section-index{
-      color:var(--blue);
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:1.5px;
-      text-transform:uppercase;
-      padding-top:7px;
-    }
-    .section-title h2{
-      margin:0;
-      font-size:30px;
-      letter-spacing:-1px;
-    }
-    .section-title p{
-      margin:7px 0 0;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .research{
-      display:grid;
-      grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);
-      gap:32px;
-      align-items:start;
-    }
-    .research h3{
-      font-size:28px;
-      margin:0 0 6px;
-      letter-spacing:-.8px;
-    }
-    .venue{
-      color:var(--blue);
-      font-size:12px;
-      font-weight:750;
-      margin-bottom:18px;
-    }
-    .research p{
-      color:var(--muted);
-      font-size:14px;
-      margin:0 0 14px;
-    }
-    .research-points{
-      margin:20px 0 0;
-      padding:0;
-      list-style:none;
-      border-top:1px solid var(--line);
-    }
-    .research-points li{
-      display:grid;
-      grid-template-columns:100px 1fr;
-      gap:16px;
-      padding:14px 0;
-      border-bottom:1px solid var(--line);
-      font-size:13px;
-    }
-    .research-points b{color:var(--ink)}
-    .research-points span{color:var(--muted)}
-    .research-visual{
-      background:var(--pale);
-      border-radius:16px;
-      padding:16px;
-    }
-    .research-visual img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:#fff;
-    }
-    .research-visual small{
-      display:block;
-      margin-top:10px;
-      color:var(--muted);
-      font-size:11px;
-    }
-    .photo-row{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-    .photo-row figure{
-      margin:0;
-      background:var(--pale);
-      border-radius:12px;
-      overflow:hidden;
-    }
-    .photo-row img{
-      width:100%;
-      aspect-ratio:4/3;
-      object-fit:contain;
-      display:block;
-      background:var(--pale);
-      padding:7px;
-    }
-    .photo-row figcaption{
-      background:#fff;
-      padding:9px 11px;
-      color:var(--muted);
-      font-size:11px;
-      border-top:1px solid var(--line);
-    }
-
-    .pub-list{border-top:1px solid var(--line)}
-    .pub{
-      display:grid;
-      grid-template-columns:90px 1fr auto;
-      gap:24px;
-      padding:22px 0;
-      border-bottom:1px solid var(--line);
-      align-items:start;
-    }
-    .pub-year{
-      color:var(--blue);
-      font-size:12px;
-      font-weight:800;
-    }
-    .pub h3{
-      margin:0 0 5px;
-      font-size:16px;
-      line-height:1.5;
-      letter-spacing:-.2px;
-    }
-    .pub p{
-      margin:2px 0;
-      color:var(--muted);
-      font-size:12px;
-    }
-    .pub-link{
-      color:var(--blue);
-      font-size:12px;
-      font-weight:750;
-      white-space:nowrap;
-    }
-
-    .focus-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:26px;
-    }
-    .focus{
-      padding-top:16px;
-      border-top:2px solid var(--ink);
-    }
-    .focus span{
-      color:var(--blue);
-      font-size:11px;
-      font-weight:800;
-    }
-    .focus h3{
-      margin:8px 0 8px;
-      font-size:18px;
-    }
-    .focus p{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .about{
-      display:grid;
-      grid-template-columns:160px 1fr;
-      gap:30px;
-      align-items:start;
-    }
-    .about-copy{
-      max-width:700px;
-    }
-    .about-copy p{
-      color:var(--muted);
-      font-size:14px;
-      margin:0 0 13px;
-    }
-    .about-meta{
-      margin-top:22px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      display:grid;
-      grid-template-columns:140px 1fr;
-      gap:8px 16px;
-      font-size:13px;
-    }
-    .about-meta b{color:var(--ink)}
-    .about-meta span{color:var(--muted)}
-
-    footer{
-      max-width:var(--max);
-      margin:auto;
-      padding:28px 24px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      color:var(--muted);
-      font-size:11px;
-    }
-
-    @media(max-width:780px){
-      .nav{padding:15px 18px}
-      nav{gap:14px;font-size:12px}
-      nav .extra{display:none}
-      main{padding:0 18px 50px}
-      .hero{grid-template-columns:1fr;gap:28px;padding:54px 0 42px}
-      .profile{width:min(72vw,260px)}
-      .quick{grid-template-columns:1fr}
-      .quick-item,.quick-item + .quick-item{
-        padding:14px 0;
-        border-left:0;
-        border-top:1px solid var(--line);
-      }
-      .quick-item:first-child{border-top:0}
-      .section-title,.about{grid-template-columns:1fr;gap:8px}
-      section{padding:50px 0}
-      .research{grid-template-columns:1fr}
-      .photo-row{grid-template-columns:1fr}
-      .pub{grid-template-columns:1fr;gap:7px}
-      .focus-grid{grid-template-columns:1fr;gap:22px}
-      .about-meta{grid-template-columns:1fr;gap:2px}
-      footer{padding:24px 18px;flex-direction:column;gap:4px}
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
-
 <body>
-  <header>
-    <div class="nav">
-      <a class="brand" href="/">Youngseon Kim<span>.</span></a>
-      <nav aria-label="주요 메뉴">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#about">About</a>
-        <a href="/cv/">CV</a>
-        <a class="extra" href="https://github.com/thsu1084">GitHub ↗</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="site-nav">
+    <a class="site-brand" href="/">Youngseon Kim<span>.</span></a>
+    <nav class="site-links">
+      <a href="#paper">Selected Paper</a>
+      <a href="#publications">Publications</a>
+      <a href="#about">About</a>
+      <a href="/cv/">CV</a>
+      <a class="extra" href="https://github.com/thsu1084">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" style="border-bottom:0">
+<main class="page">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">AI Research & Engineering</p>
+      <h1>시각 정보와 지식을<br />연결하는 <em>AI를 연구합니다.</em></h1>
+      <p class="lead">Multimodal AI, AI for Sports, retrieval-augmented generation, and video understanding.</p>
+      <p class="identity"><strong>김영선 · Youngseon Kim</strong>중앙대학교 컴퓨터공학 석사과정</p>
+      <div class="actions">
+        <a class="btn primary" href="#paper">Selected Paper</a>
+        <a class="btn" href="/cv/">CV</a>
+        <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="profile"><img src="/assets/img/prof_pic.jpg" alt="Youngseon Kim profile photo" /></div>
+  </section>
+
+  <section class="section" id="paper">
+    <h2 class="section-heading">Selected Paper</h2>
+    <div class="paper-grid">
       <div>
-        <p class="eyebrow">AI Research & Engineering</p>
-        <h1>시각 정보와 지식을<br />연결하는 <em>AI를 연구합니다.</em></h1>
-        <p class="intro">
-          멀티모달 모델이 영상 속 단서를 이해하고, 필요한 외부 지식을 찾아
-          더 신뢰할 수 있는 답변으로 연결하는 방법을 연구합니다.
-          특히 AI for Sports와 실제 영상 이해 문제에 관심이 있습니다.
-        </p>
-        <p class="identity">
-          <strong>김영선 · Youngseon Kim</strong>
-          중앙대학교 컴퓨터공학 석사과정
-        </p>
+        <div class="paper-venue">CVSports @ CVPR 2026 · Spotlight</div>
+        <h3 class="paper-title">SetPieceRAG</h3>
+        <p class="paper-subtitle">Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</p>
+        <p class="paper-body">A task-adaptive multimodal RAG framework for knowledge-intensive soccer video question answering.</p>
+        <div class="paper-meta">
+          <div class="paper-meta-row"><b>Authors</b><span><strong>Youngseon Kim</strong>, Jongmin Lee</span></div>
+          <div class="paper-meta-row"><b>Topics</b><span>Multimodal RAG · Soccer VQA · CLIP · LoRA</span></div>
+        </div>
         <div class="actions">
-          <a class="btn primary" href="#research">Research</a>
+          <a class="btn primary" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
+          <a class="btn" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png">Poster ↗</a>
+        </div>
+      </div>
+      <div>
+        <div class="poster-card"><img src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG CVPR 2026 poster" /></div>
+        <div class="photo-strip">
+          <figure><img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation" /><figcaption>CVPR 2026 · Denver</figcaption></figure>
+          <figure><img src="/assets/img/cvpr2026-group.jpg" alt="CVSports group photo" /><figcaption>CVSports @ CVPR 2026</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="publications">
+    <h2 class="section-heading">Publications</h2>
+    <div class="pub-list">
+      <article class="pub-row">
+        <div class="pub-year">2026 · CVPRW</div>
+        <div><h3>SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</h3><p><strong>Youngseon Kim</strong>, Jongmin Lee</p><p>CVSports Workshop @ CVPR 2026 · Spotlight</p></div>
+        <a class="text-link" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
+      </article>
+      <article class="pub-row">
+        <div class="pub-year">2026 · ACCV</div>
+        <div><h3>SoccerNet 2026 Challenges Results</h3><p>Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee</p><p>Asian Conference on Computer Vision · Co-author</p></div>
+        <a class="text-link" href="https://arxiv.org/abs/2607.07320">arXiv ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-heading">Research Interests</h2>
+    <div class="interest-grid">
+      <article class="interest"><h3>Multimodal AI</h3><p>Vision-language understanding for images and real-world video.</p></article>
+      <article class="interest"><h3>Knowledge Grounding</h3><p>Retrieval-augmented generation and external knowledge integration.</p></article>
+      <article class="interest"><h3>AI for Sports</h3><p>Soccer video understanding, VQA, visual retrieval, and player-centric analysis.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-heading">About</h2>
+    <div class="about-grid">
+      <div class="about-name">Youngseon Kim</div>
+      <div class="about-copy">
+        <p>M.S. student in Computer Science and Engineering at Chung-Ang University.</p>
+        <p>My research focuses on multimodal AI, AI for Sports, retrieval-augmented generation, and video understanding.</p>
+        <div class="about-meta">
+          <b>Affiliation</b><span>Chung-Ang University</span>
+          <b>Research</b><span>Multimodal AI · AI for Sports · RAG · Video Understanding</span>
+        </div>
+        <div class="actions">
           <a class="btn" href="/cv/">CV</a>
           <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
         </div>
       </div>
-
-      <div class="profile">
-        <img src="/assets/img/prof_pic.jpg" alt="Youngseon Kim profile photo" />
-      </div>
-    </section>
-
-    <div class="quick">
-      <div class="quick-item">
-        <strong>CVPR 2026 · CVSports</strong>
-        <span>SetPieceRAG · First author · Spotlight</span>
-      </div>
-      <div class="quick-item">
-        <strong>ACCV 2026</strong>
-        <span>SoccerNet Challenges Results · Co-author</span>
-      </div>
-      <div class="quick-item">
-        <strong>AI for Sports × Multimodal AI</strong>
-        <span>RAG · VLMs · Video understanding</span>
-      </div>
     </div>
+  </section>
+</main>
 
-    <section id="research">
-      <div class="section-title">
-        <div class="section-index">01 / Research</div>
-        <div>
-          <h2>Selected Research</h2>
-          <p>대표 프로젝트를 문제와 접근 중심으로 간결하게 정리했습니다.</p>
-        </div>
-      </div>
-
-      <div class="research">
-        <div>
-          <div class="venue">CVSports @ CVPR 2026 · Spotlight</div>
-          <h3>SetPieceRAG</h3>
-          <p><strong>Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</strong></p>
-          <p>
-            축구 방송 영상만으로 답하기 어려운 선수·팀·역사적 맥락의 질문에 대해
-            시각 단서와 외부 축구 지식을 연결하는 멀티모달 RAG 시스템입니다.
-          </p>
-
-          <ul class="research-points">
-            <li><b>Problem</b><span>영상 내부 정보만으로는 부족한 knowledge-intensive soccer VQA</span></li>
-            <li><b>Approach</b><span>CLIP 기반 grounding + SoccerWiki / web retrieval + multimodal generation</span></li>
-            <li><b>Methods</b><span>Task-adaptive routing, LoRA adaptation, preprocessing, fallback strategies</span></li>
-          </ul>
-
-          <div class="actions">
-            <a class="btn primary" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
-            <a class="btn" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png">Poster ↗</a>
-          </div>
-        </div>
-
-        <div>
-          <div class="research-visual">
-            <img src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG CVPR 2026 poster" />
-            <small>SetPieceRAG · CVSports @ CVPR 2026</small>
-          </div>
-
-          <div class="photo-row">
-            <figure>
-              <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports" />
-              <figcaption>Presentation · Denver</figcaption>
-            </figure>
-            <figure>
-              <img src="/assets/img/cvpr2026-group.jpg" alt="CVSports workshop group photo at CVPR 2026" />
-              <figcaption>CVSports @ CVPR 2026</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications">
-      <div class="section-title">
-        <div class="section-index">02 / Publications</div>
-        <div>
-          <h2>Publications</h2>
-          <p>현재 공개된 주요 연구 결과입니다.</p>
-        </div>
-      </div>
-
-      <div class="pub-list">
-        <article class="pub">
-          <div class="pub-year">2026 · CVPRW</div>
-          <div>
-            <h3>SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</h3>
-            <p><strong>Youngseon Kim</strong>, Jongmin Lee</p>
-            <p>CVSports Workshop @ CVPR 2026 · Spotlight</p>
-          </div>
-          <a class="pub-link" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
-        </article>
-
-        <article class="pub">
-          <div class="pub-year">2026 · ACCV</div>
-          <div>
-            <h3>SoccerNet 2026 Challenges Results</h3>
-            <p>Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee</p>
-            <p>Asian Conference on Computer Vision · Co-author</p>
-          </div>
-          <a class="pub-link" href="https://arxiv.org/abs/2607.07320">arXiv ↗</a>
-        </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <div class="section-index">03 / Focus</div>
-        <div>
-          <h2>Research Focus</h2>
-          <p>하나의 큰 주제 아래에서 연결되는 연구 관심사입니다.</p>
-        </div>
-      </div>
-
-      <div class="focus-grid">
-        <article class="focus">
-          <span>01</span>
-          <h3>Multimodal Understanding</h3>
-          <p>이미지·영상과 언어를 함께 다루며 실제 방송 환경의 복잡한 시각적 맥락을 이해합니다.</p>
-        </article>
-        <article class="focus">
-          <span>02</span>
-          <h3>Knowledge Grounding & RAG</h3>
-          <p>모델 내부 지식만으로 부족한 질문에 외부 지식을 검색하고 답변 근거로 연결합니다.</p>
-        </article>
-        <article class="focus">
-          <span>03</span>
-          <h3>AI for Sports</h3>
-          <p>축구 영상 이해, video QA, visual retrieval 등 스포츠 도메인의 실제 문제에 멀티모달 AI를 적용합니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="about">
-        <div class="section-index">04 / About</div>
-        <div class="about-copy">
-          <h2 style="margin:0 0 16px;font-size:30px;letter-spacing:-1px">Youngseon Kim</h2>
-          <p>
-            중앙대학교 컴퓨터공학 석사과정에서 멀티모달 AI, 컴퓨터 비전,
-            vision-language models, retrieval-augmented generation을 연구하고 있습니다.
-          </p>
-          <p>
-            특히 스포츠 방송 영상처럼 시각적 단서와 외부 지식이 함께 필요한 문제에서,
-            검색·모델 적응·추론을 연결한 실용적인 AI 시스템을 만드는 데 관심이 있습니다.
-          </p>
-
-          <div class="about-meta">
-            <b>Affiliation</b><span>Chung-Ang University</span>
-            <b>Research</b><span>Multimodal AI · AI for Sports · RAG · Video Understanding</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn" href="/cv/">View CV</a>
-            <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
-            <a class="btn" href="https://bluedream1121.github.io/spatial-intelligence-lab/">Lab ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span>© 2026 Youngseon Kim</span>
-    <span>Multimodal AI · AI for Sports · Knowledge Grounding</span>
-  </footer>
+<footer class="site-footer"><span>© 2026 Youngseon Kim</span><span>Multimodal AI · AI for Sports · Knowledge Grounding</span></footer>
 </body>
 </html>
