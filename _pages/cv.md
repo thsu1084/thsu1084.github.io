@@ -9,177 +9,164 @@ title: Youngseon Kim | CV
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Youngseon Kim · CV</title>
-  <meta name="description" content="Curriculum Vitae of Youngseon Kim, M.S. student at Chung-Ang University working on Multimodal AI, AI for Sports, RAG, and Vision-Language Understanding." />
+  <meta name="description" content="Curriculum Vitae of Youngseon Kim." />
   <link rel="stylesheet" href="/assets/css/site.css?v=20261008-3" />
 </head>
 <body>
-  {% include site-header.html %}
+{% include site-header.html %}
 
-  <main class="page">
-    <section class="cv-hero">
-      <div>
-        <p class="eyebrow">Curriculum Vitae</p>
-        <h1>Youngseon Kim</h1>
-        <p class="cv-role">M.S. Student · Computer Science and Engineering · Chung-Ang University</p>
-        <div class="actions">
-          <a class="btn primary" href="/">Portfolio</a>
-          <a class="btn" href="javascript:window.print()">Print / Save as PDF</a>
+<main class="page">
+
+  <section class="hero">
+    <div>
+      <p class="kicker">Curriculum Vitae</p>
+      <h1>Youngseon Kim</h1>
+      <p class="hero-role">M.S. Student in Computer Science and Engineering, Chung-Ang University</p>
+      <p class="lead">
+        Multimodal AI, AI for Sports, retrieval-augmented generation,
+        vision-language understanding, computer vision, and video understanding.
+      </p>
+      <div class="inline-links">
+        <a href="/">Portfolio</a>
+        <a href="javascript:window.print()">Print / Save as PDF</a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <img src="/assets/img/prof_pic.jpg" alt="Youngseon Kim profile photo" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-heading">Research Interests</h2>
+    <div class="interest-grid">
+      <article class="interest">
+        <h3>Multimodal AI</h3>
+        <p>Vision-language understanding for images and real-world video.</p>
+      </article>
+      <article class="interest">
+        <h3>Knowledge Grounding</h3>
+        <p>Retrieval-augmented generation and external knowledge integration.</p>
+      </article>
+      <article class="interest">
+        <h3>AI for Sports</h3>
+        <p>Soccer video understanding, VQA, visual retrieval, and player-centric analysis.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-heading">Education</h2>
+    <div class="about-grid">
+      <div class="about-name">2025 – Present</div>
+      <div class="about-copy">
+        <p><strong>Chung-Ang University</strong></p>
+        <p>M.S. Student, Department of Computer Science and Engineering</p>
+        <div class="about-meta">
+          <b>Research</b><span>Multimodal AI · AI for Sports · RAG · Vision-Language Understanding · Computer Vision</span>
         </div>
       </div>
-      <div class="cv-contact">
-        Seoul, Republic of Korea<br />
-        thsu1084@cau.ac.kr
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cv-section">
-      <div class="cv-label">Research Areas</div>
-      <div class="cv-body">
-        <div class="focus-list">
-          <span>Multimodal AI</span>
-          <span>AI for Sports</span>
-          <span>Retrieval-Augmented Generation</span>
-          <span>Vision-Language Understanding</span>
-          <span>Computer Vision</span>
-          <span>Video Understanding</span>
+  <section class="section">
+    <h2 class="section-heading">Publications</h2>
+    <div class="pub-list">
+      <article class="pub-row">
+        <div class="pub-year">2026 · CVPRW</div>
+        <div>
+          <h3>SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</h3>
+          <p><strong>Youngseon Kim</strong>, Jongmin Lee</p>
+          <p>CVSports Workshop @ CVPR 2026 · Spotlight</p>
         </div>
-      </div>
-    </section>
+        <a class="text-link" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
+      </article>
 
-    <section class="cv-section">
-      <div class="cv-label">Research Interests</div>
-      <div class="cv-body">
+      <article class="pub-row">
+        <div class="pub-year">2026 · ACCV</div>
+        <div>
+          <h3>SoccerNet 2026 Challenges Results</h3>
+          <p>Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee</p>
+          <p>Asian Conference on Computer Vision · Co-author</p>
+        </div>
+        <a class="text-link" href="https://arxiv.org/abs/2607.07320">Preprint ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-heading">Funded Research</h2>
+
+    <div class="about-grid" style="margin-bottom:36px">
+      <div class="about-name">2025 – Sep. 2026</div>
+      <div class="about-copy">
+        <p><strong>National Research Foundation of Korea Master’s Student Research Fellowship</strong></p>
+        <p>Master’s Student Researcher</p>
         <p>
-          Reliable and knowledge-grounded multimodal AI for real-world visual understanding,
-          with a particular interest in AI for sports. My work focuses on domain-specific
-          retrieval-augmented generation, vision-language understanding, video question answering,
-          visual retrieval, and task-adaptive multimodal reasoning.
+          Selected for the NRF Master’s Student Research Fellowship in the science and engineering field.
+          Research on natural-language-driven open-vocabulary object detection and RoI-level visual-text matching.
         </p>
       </div>
-    </section>
+    </div>
 
-    <section class="cv-section">
-      <div class="cv-label">Education</div>
-      <div class="cv-body">
-        <div class="entry">
-          <div class="entry-head">
-            <div class="entry-title">Chung-Ang University</div>
-            <div class="entry-date">2025 – Present</div>
-          </div>
-          <div class="entry-role">M.S. Student, Department of Computer Science and Engineering</div>
-<p>
-            Research areas: multimodal AI, AI for sports, retrieval-augmented generation,
-            vision-language understanding, and computer vision.
-          </p>
+    <div class="about-grid">
+      <div class="about-name">Apr. 2025 – Oct. 2025</div>
+      <div class="about-copy">
+        <p><strong>WISET Women Graduate Student Engineering Research Team Program</strong></p>
+        <p>Research Lead, Chung-Ang University</p>
+        <p>
+          Led a funded multimodal AI research project and managed research planning,
+          experiment design, team coordination, result analysis, and report preparation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-heading">AI for Sports</h2>
+    <div class="about-grid">
+      <div class="about-name">2026</div>
+      <div class="about-copy">
+        <p><strong>SoccerNet Challenge 2026 · Visual Question Answering</strong></p>
+        <p>15th / 143 participants</p>
+        <p>
+          Developed a task-specific soccer VQA system combining domain-specific RAG,
+          CLIP-based entity grounding, external knowledge integration, LLM ensembling,
+          LoRA adaptation, super-resolution preprocessing, and object-centric video analysis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-heading">Technical Skills</h2>
+    <div class="about-grid">
+      <div class="about-name">Stack</div>
+      <div class="about-copy">
+        <div class="about-meta" style="margin-top:0;padding-top:0;border-top:0">
+          <b>Programming</b><span>Python · Java · SQL · Bash · LaTeX</span>
+          <b>Deep Learning</b><span>PyTorch · Hugging Face Transformers · PEFT · LoRA · Unsloth</span>
+          <b>Vision-Language / RAG</b><span>CLIP · InternVL · Qwen-VL · Gemini · FAISS · Vector databases</span>
+          <b>Computer Vision</b><span>Open-vocabulary detection · Visual retrieval · Tracking · Re-ID · Super-resolution · SAHI</span>
+          <b>AI for Sports</b><span>Video understanding · Soccer VQA · Knowledge grounding · Player-centric visual analysis</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cv-section">
-      <div class="cv-label">Publications</div>
-      <div class="cv-body">
-        <div class="publication">
-          <div class="pub-title">
-            SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models
-          </div>
-          <div class="pub-meta">
-            <strong>Youngseon Kim</strong>, Jongmin Lee · CVSports Workshop @ CVPR 2026 · Spotlight
-          </div>
-          <div class="pub-links">
-            <a href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
-          </div>
-        </div>
-
-        <div class="publication">
-          <div class="pub-title">SoccerNet 2026 Challenges Results</div>
-          <div class="pub-meta">
-            Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee ·
-            Asian Conference on Computer Vision (ACCV) 2026 · Co-author
-          </div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/abs/2607.07320">Preprint ↗</a>
-          </div>
-        </div>
+  <section class="section">
+    <h2 class="section-heading">Languages</h2>
+    <div class="about-grid">
+      <div class="about-name">Language</div>
+      <div class="about-copy">
+        <p><strong>Korean</strong> · Native</p>
+        <p><strong>English</strong> · Professional research reading and writing</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cv-section">
-      <div class="cv-label">Funded Research</div>
-      <div class="cv-body">
-        <div class="entry">
-          <div class="entry-head">
-            <div class="entry-title">National Research Foundation of Korea Master’s Student Research Fellowship</div>
-            <div class="entry-date">2025 – Sep. 2026</div>
-          </div>
-          <div class="entry-role">Master’s Student Researcher</div>
-          <p>
-            Selected for the NRF Master’s Student Research Fellowship in the science and engineering field.
-            Research on natural-language-driven open-vocabulary object detection and RoI-level visual-text matching.
-          </p>
-        </div>
+</main>
 
-        <div class="entry">
-          <div class="entry-head">
-            <div class="entry-title">WISET Women Graduate Student Engineering Research Team Program</div>
-            <div class="entry-date">Apr. 2025 – Oct. 2025</div>
-          </div>
-          <div class="entry-role">Research Lead, Chung-Ang University</div>
-          <p>
-            Led a funded multimodal AI research project and managed research planning,
-            experiment design, team coordination, result analysis, and report preparation.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <div class="cv-label">AI for Sports</div>
-      <div class="cv-body">
-        <div class="entry">
-          <div class="entry-head">
-            <div class="entry-title">SoccerNet Challenge 2026 · Visual Question Answering</div>
-            <div class="entry-date">2026</div>
-          </div>
-          <div class="entry-role">15th / 143 participants</div>
-          <p>
-            Developed a task-specific soccer VQA system combining domain-specific RAG,
-            CLIP-based entity grounding, external knowledge integration, LLM ensembling,
-            LoRA adaptation, super-resolution preprocessing, and object-centric video analysis.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <div class="cv-label">Technical Skills</div>
-      <div class="cv-body">
-        <div class="skills">
-          <div class="skill-name">Programming</div>
-          <div>Python, Java, SQL, Bash, LaTeX</div>
-
-          <div class="skill-name">Deep Learning</div>
-          <div>PyTorch, Hugging Face Transformers, PEFT, LoRA, Unsloth</div>
-
-          <div class="skill-name">Vision-Language / RAG</div>
-          <div>CLIP, InternVL, Qwen-VL, Gemini, FAISS, vector databases, prompt engineering</div>
-
-          <div class="skill-name">Computer Vision</div>
-          <div>Open-vocabulary object detection, visual retrieval, object tracking, Re-ID, super-resolution, SAHI</div>
-
-          <div class="skill-name">AI for Sports</div>
-          <div>Video understanding, soccer VQA, knowledge grounding, player-centric visual analysis</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <div class="cv-label">Languages</div>
-      <div class="cv-body">
-        <p><strong>Korean:</strong> Native &nbsp;&nbsp; <strong>English:</strong> Professional research reading and writing</p>
-      </div>
-    </section>
-  </main>
-
-  {% include site-footer.html %}
+{% include site-footer.html %}
 </body>
 </html>
