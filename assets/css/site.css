@@ -80,7 +80,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   letter-spacing:-2.2px;
   font-weight:760;
 }
-.cv-role{
+.hero-role,.cv-role{
   margin:14px 0 0;
   color:#3e4652;
   font-size:16px;
@@ -93,20 +93,20 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   font-size:15px;
   line-height:1.75;
 }
-.actions{
+.inline-links,.actions{
   display:flex;
   flex-wrap:wrap;
   gap:18px;
   margin-top:24px;
 }
-.text-link{
+.inline-links a,.text-link{
   color:var(--ink);
   font-size:13px;
   font-weight:650;
   border-bottom:1px solid #bcc3cc;
   padding-bottom:2px;
 }
-.text-link:hover{color:var(--accent);border-color:var(--accent)}
+.inline-links a:hover,.text-link:hover{color:var(--accent);border-color:var(--accent)}
 .btn{
   display:inline-flex;
   align-items:center;
@@ -149,6 +149,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   letter-spacing:-.65px;
   font-weight:720;
 }
+.paper-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
+  gap:42px;
+  align-items:center;
+}
 .paper-venue{
   margin:0 0 10px;
   color:var(--accent);
@@ -162,6 +168,28 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   line-height:1.5;
   letter-spacing:-.35px;
   font-weight:700;
+}
+.paper-authors{
+  margin:12px 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+.paper-links{
+  display:flex;
+  gap:16px;
+  margin-top:16px;
+}
+.paper-links a{
+  font-size:12px;
+  font-weight:650;
+  border-bottom:1px solid #bcc3cc;
+}
+.paper-links a:hover{color:var(--accent);border-color:var(--accent)}
+.paper-photo{
+  width:100%;
+  border-radius:10px;
+  display:block;
+  border:1px solid var(--line);
 }
 .pub-list{border-top:1px solid var(--line)}
 .pub-row{
@@ -360,6 +388,8 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   }
   .profile{width:min(68vw,240px)}
   .section{padding:44px 0}
+  .paper-feature{grid-template-columns:1fr;gap:24px}
+  .paper-photo{max-width:420px}
   .pub-row{grid-template-columns:1fr;gap:6px}
   .interest-grid{grid-template-columns:1fr;gap:22px}
   .about-grid{grid-template-columns:1fr;gap:10px}
@@ -373,7 +403,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   .site-footer{padding:22px 18px 26px;flex-direction:column;gap:4px}
 }
 @media print{
-  .site-header,.actions,.site-footer{display:none}
+  .site-header,.actions,.inline-links,.site-footer{display:none}
   .page{max-width:none;padding:0}
   .cv-hero{padding:18px 0 22px}
   .cv-section{padding:17px 0;break-inside:avoid}
