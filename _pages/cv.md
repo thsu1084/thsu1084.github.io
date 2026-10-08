@@ -20,7 +20,7 @@ title: Youngseon Kim | CV
   <section class="hero" style="grid-template-columns:1fr;min-height:auto;">
     <div>
       <p class="kicker">Curriculum Vitae</p>
-      <h1>Youngseon Kim</h1>
+      <h1 style="font-size:clamp(34px,4vw,44px);letter-spacing:-1.6px;">Youngseon Kim</h1>
       <p class="hero-role">M.S. Student in Computer Science and Engineering, Chung-Ang University</p>
       <p class="lead">
         Multimodal AI, AI for Sports, retrieval-augmented generation,
