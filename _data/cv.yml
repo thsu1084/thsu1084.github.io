@@ -1,11 +1,10 @@
 cv:
   name: Youngseon Kim
-  label: M.S. Student in Computer Engineering
   social_networks:
     - network: GitHub
       username: thsu1084
   sections:
     Education:
-      - institution: Chung-Ang University
-        area: Computer Engineering
-        studyType: M.S. (in progress)
+      - "M.S. Student in Computer Engineering, Chung-Ang University. Advisor: Prof. Jongmin Lee."
+    Research interests:
+      - "Multimodal learning, computer vision, vision-language models, and retrieval-augmented generation."
