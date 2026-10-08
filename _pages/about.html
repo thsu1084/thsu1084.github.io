@@ -157,18 +157,19 @@ permalink: /
       }
       .profile-card {
         width: min(100%, 300px);
+        height: fit-content;
+        align-self: center;
         justify-self: end;
         background: #fff;
         border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 10px;
+        border-radius: 18px;
+        padding: 7px;
         box-shadow: 0 12px 32px #23304a10;
+        overflow: hidden;
       }
       .profile-photo {
         width: 100%;
-        aspect-ratio: 3 / 4;
-        object-fit: contain;
-        object-position: center 30%;
+        height: auto;
         display: block;
         border-radius: 12px;
       }
@@ -618,8 +619,6 @@ permalink: /
             class="profile-photo"
             src="/assets/img/prof_pic.jpg"
             alt="Youngseon Kim profile photo"
-            width="384"
-            height="512"
           />
         </div>
       </div>
