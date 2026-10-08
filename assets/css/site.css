@@ -1,0 +1,98 @@
+:root{
+  --ink:#191f28;
+  --muted:#667384;
+  --blue:#2463eb;
+  --line:#e8edf3;
+  --pale:#f6f8fb;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  margin:0;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.68;
+  word-break:keep-all;
+}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+.page{
+  max-width:var(--max);
+  margin:auto;
+  padding:0 24px 72px;
+}
+.eyebrow{
+  margin:0 0 14px;
+  color:var(--blue);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) 250px;
+  gap:72px;
+  align-items:center;
+  padding:86px 0 72px;
+}
+.hero h1{
+  margin:0 0 18px;
+  font-size:clamp(40px,5vw,58px);
+  line-height:1.16;
+  letter-spacing:-2.4px;
+}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.lead{max-width:640px;margin:0;color:var(--muted);font-size:16px}
+.identity{margin:22px 0 0;color:var(--muted);font-size:14px}
+.identity strong{display:block;color:var(--ink);font-size:18px;margin-bottom:2px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:40px;
+  padding:0 15px;border-radius:8px;background:var(--pale);font-size:13px;font-weight:750
+}
+.btn.primary{background:var(--blue);color:#fff}
+.profile{
+  width:100%;padding:7px;border:1px solid var(--line);border-radius:18px;
+  background:#fff;box-shadow:0 14px 38px rgba(35,48,74,.08)
+}
+.profile img{width:100%;height:auto;display:block;border-radius:12px}
+.section{padding:62px 0;border-top:1px solid var(--line)}
+.section:first-of-type{border-top:0}
+.pub-list{border-top:1px solid var(--line)}
+.pub-year{color:var(--blue);font-size:12px;font-weight:800}
+.interest{padding-top:15px;border-top:2px solid var(--ink)}
+.interest h3{margin:0 0 8px;font-size:18px}
+.interest p{margin:0;color:var(--muted);font-size:13px}
+.about-copy{max-width:720px}
+.about-copy p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.about-meta{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);display:grid;grid-template-columns:130px 1fr;gap:7px 14px;font-size:13px}
+.about-meta b{color:var(--ink)} .about-meta span{color:var(--muted)}
+.cv-section{display:grid;grid-template-columns:185px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line)}
+.cv-label{padding-top:3px;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.cv-body{color:#3f4b59;font-size:14px}
+.cv-body p{margin:0 0 8px}
+.focus-list{display:flex;flex-wrap:wrap;gap:8px}
+.focus-list span{background:var(--pale);padding:6px 10px;border-radius:6px;font-size:12px;font-weight:650;color:#465464}
+.entry{margin-bottom:22px}.entry:last-child{margin-bottom:0}
+.entry-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;margin-bottom:3px}
+.entry-title{color:var(--ink);font-size:15px;font-weight:780}
+.entry-date{color:#7b8794;font-size:12px;white-space:nowrap}
+.entry-role{color:var(--muted);font-size:13px;margin-bottom:6px}
+.publication{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid #eef1f4}
+.publication:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.pub-title{color:var(--ink);font-size:15px;font-weight:750;line-height:1.55}
+.pub-meta{margin-top:5px;color:var(--muted);font-size:13px}
+.pub-links{margin-top:6px;color:var(--blue);font-size:12px;font-weight:700}
+.skills{display:grid;grid-template-columns:150px 1fr;gap:8px 18px}.skill-name{font-weight:750;color:var(--ink)}
+@media(max-width:780px){
+  .page{padding:0 18px 50px}.hero{grid-template-columns:1fr;gap:28px;padding:54px 0 42px}.profile{width:min(72vw,260px)}
+  .section{padding:48px 0}.about-meta{grid-template-columns:1fr;gap:2px}
+  .cv-section{grid-template-columns:1fr;gap:10px;padding:24px 0}.entry-head{display:block}.entry-date{display:block;margin-top:3px}
+  .skills{grid-template-columns:1fr;gap:3px}
+}
+@media print{
+  .actions{display:none}.page{max-width:none;padding:0}.cv-section{padding:18px 0;break-inside:avoid}
+}
