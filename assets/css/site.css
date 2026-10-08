@@ -65,7 +65,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   align-items:center;
   padding:74px 0 60px;
 }
-.kicker,.eyebrow{
+.kicker{
   margin:0 0 15px;
   color:var(--accent);
   font-size:11px;
@@ -73,14 +73,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   letter-spacing:1.6px;
   text-transform:uppercase;
 }
-.hero h1,.cv-hero h1{
+.hero h1{
   margin:0;
   font-size:clamp(42px,5vw,54px);
   line-height:1.06;
   letter-spacing:-2.2px;
   font-weight:760;
 }
-.hero-role,.cv-role{
+.hero-role{
   margin:14px 0 0;
   color:#3e4652;
   font-size:16px;
@@ -119,11 +119,6 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   color:var(--ink);
   font-size:12px;
   font-weight:650;
-}
-.btn.primary{
-  background:var(--ink);
-  border-color:var(--ink);
-  color:#fff;
 }
 .profile{
   width:100%;
@@ -274,106 +269,19 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 }
 
 /* CV uses the same shell, typography, spacing and colors */
-.cv-hero{
-  padding:72px 0 38px;
-  border-bottom:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  gap:40px;
-  align-items:end;
-}
-.cv-contact{
-  text-align:right;
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.8;
-  white-space:nowrap;
-}
-.cv-section{
-  display:grid;
-  grid-template-columns:180px 1fr;
-  gap:32px;
-  padding:26px 0;
-  border-bottom:1px solid var(--line);
-}
-.cv-label{
-  padding-top:2px;
-  color:#555d68;
-  font-size:11px;
-  font-weight:650;
-  letter-spacing:.9px;
-  text-transform:uppercase;
-}
-.cv-body{
-  color:#3f4752;
-  font-size:13px;
-}
-.cv-body p{margin:0 0 8px}
-.focus-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px 16px;
-}
-.focus-list span{
-  padding:0;
-  background:none;
-  color:#3f4752;
-  font-size:13px;
-  font-weight:500;
-}
 .entry{margin-bottom:20px}
 .entry:last-child{margin-bottom:0}
-.entry-head{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:baseline;
-  margin-bottom:3px;
-}
-.entry-title{
-  color:var(--ink);
-  font-size:14px;
-  font-weight:650;
-}
-.entry-date{
-  color:#8a919b;
-  font-size:12px;
-  white-space:nowrap;
-}
-.entry-role{
-  color:var(--muted);
-  font-size:12px;
-  margin-bottom:6px;
-}
 .publication{
   padding-bottom:16px;
   margin-bottom:16px;
   border-bottom:1px solid #eff1f4;
 }
 .publication:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
-.pub-title{
-  color:var(--ink);
-  font-size:14px;
-  font-weight:650;
-  line-height:1.5;
-}
-.pub-meta{
-  margin-top:4px;
-  color:var(--muted);
-  font-size:12px;
-}
-.pub-links{
-  margin-top:5px;
-  color:var(--accent);
-  font-size:12px;
-  font-weight:600;
-}
 .skills{
   display:grid;
   grid-template-columns:145px 1fr;
   gap:8px 18px;
 }
-.skill-name{font-weight:600;color:#333b46}
 
 @media(max-width:780px){
   .site-nav{min-height:62px;padding:0 18px}
@@ -394,17 +302,10 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   .interest-grid{grid-template-columns:1fr;gap:22px}
   .about-grid{grid-template-columns:1fr;gap:10px}
   .about-meta{grid-template-columns:1fr;gap:2px}
-  .cv-hero{display:block;padding:52px 0 30px}
-  .cv-contact{text-align:left;margin-top:20px;white-space:normal}
-  .cv-section{grid-template-columns:1fr;gap:9px;padding:22px 0}
-  .entry-head{display:block}
-  .entry-date{display:block;margin-top:3px}
   .skills{grid-template-columns:1fr;gap:3px}
   .site-footer{padding:22px 18px 26px;flex-direction:column;gap:4px}
 }
 @media print{
   .site-header,.actions,.inline-links,.site-footer{display:none}
   .page{max-width:none;padding:0}
-  .cv-hero{padding:18px 0 22px}
-  .cv-section{padding:17px 0;break-inside:avoid}
 }
