@@ -4,7 +4,6 @@ permalink: /cv/
 title: Youngseon Kim | CV
 ---
 
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -280,8 +279,7 @@ title: Youngseon Kim | CV
             <div class="entry-date">2025 – Present</div>
           </div>
           <div class="entry-role">M.S. Student, Department of Computer Science and Engineering</div>
-          <p>Advisor: Prof. Jongmin Lee</p>
-          <p>
+<p>
             Research areas: multimodal AI, AI for sports, retrieval-augmented generation,
             vision-language understanding, and computer vision.
           </p>
@@ -323,7 +321,7 @@ title: Youngseon Kim | CV
         <div class="entry">
           <div class="entry-head">
             <div class="entry-title">National Research Foundation of Korea Master’s Student Research Fellowship</div>
-            <div class="entry-date">2025 – Present</div>
+            <div class="entry-date">2025 – Sep. 2026</div>
           </div>
           <div class="entry-role">Master’s Student Researcher</div>
           <p>
