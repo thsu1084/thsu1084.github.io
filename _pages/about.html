@@ -172,17 +172,7 @@ permalink: /
         display: block;
         border-radius: 12px;
       }
-      .profile-meta {
-        padding: 18px 20px 20px;
-      }
-      .profile-meta strong {
-        display: block;
-        font-size: 16px;
-      }
-      .profile-meta span {
-        color: var(--muted);
-        font-size: 12px;
-      }
+
       .conference-gallery {
         margin-top: 28px;
         display: grid;
@@ -196,13 +186,20 @@ permalink: /
         overflow: hidden;
         background: var(--pale);
       }
+      .conference-shot .photo-frame {
+        aspect-ratio: 4 / 3;
+        background: var(--pale);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
       .conference-shot img {
         width: 100%;
-        min-height: 260px;
-        max-height: 410px;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
         display: block;
+        border-radius: 10px;
       }
       .conference-shot figcaption {
         padding: 11px 14px 13px;
@@ -515,9 +512,9 @@ permalink: /
           grid-template-columns: 1fr;
           gap: 14px;
         }
-        .conference-shot img {
-          min-height: 220px;
-          max-height: 360px;
+        .profile-card {
+          width: min(78vw, 300px);
+          justify-self: start;
         }
         .strip {
           grid-template-columns: 1fr;
@@ -624,10 +621,6 @@ permalink: /
             width="1600"
             height="1200"
           />
-          <div class="profile-meta">
-            <strong>Youngseon Kim</strong>
-            <span>Multimodal AI · Computer Vision · RAG</span>
-          </div>
         </div>
       </div>
       <div class="strip">
@@ -686,11 +679,15 @@ permalink: /
         </article>
         <div class="conference-gallery" aria-label="CVPR 2026 CVSports conference photos">
           <figure class="conference-shot">
-            <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports in Denver" loading="lazy" />
+            <div class="photo-frame">
+              <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports in Denver" loading="lazy" />
+            </div>
             <figcaption>Presenting SetPieceRAG · CVSports @ CVPR 2026 · Denver</figcaption>
           </figure>
           <figure class="conference-shot">
-            <img src="/assets/img/cvpr2026-group.jpg" alt="CVPR 2026 CVSports workshop group photo" loading="lazy" />
+            <div class="photo-frame">
+              <img src="/assets/img/cvpr2026-group.jpg" alt="CVPR 2026 CVSports workshop group photo" loading="lazy" />
+            </div>
             <figcaption>CVSports community · CVPR 2026</figcaption>
           </figure>
         </div>
