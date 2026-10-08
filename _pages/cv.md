@@ -10,35 +10,24 @@ title: Youngseon Kim | CV
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Youngseon Kim · CV</title>
   <meta name="description" content="Curriculum Vitae of Youngseon Kim, M.S. student at Chung-Ang University working on Multimodal AI, AI for Sports, RAG, and Vision-Language Understanding." />
-  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261008-2" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-nav">
-      <a class="site-brand" href="/">Youngseon Kim<span>.</span></a>
-      <nav class="site-links" aria-label="Primary navigation">
-        <a href="/#paper">Selected Paper</a>
-        <a href="/#publications">Publications</a>
-        <a href="/#about">About</a>
-        <a class="active" href="/cv/">CV</a>
-        <a class="extra" href="https://github.com/thsu1084">GitHub ↗</a>
-      </nav>
-    </div>
-  </header>
+  {% include site-header.html %}
 
   <main class="page">
-    <section class="cv-intro">
+    <section class="cv-hero">
       <div>
         <p class="eyebrow">Curriculum Vitae</p>
         <h1>Youngseon Kim</h1>
-        <p class="role">M.S. Student · Computer Science and Engineering · Chung-Ang University</p>
-        <div class="cv-actions">
+        <p class="cv-role">M.S. Student · Computer Science and Engineering · Chung-Ang University</p>
+        <div class="actions">
           <a class="btn primary" href="/">Portfolio</a>
           <a class="btn" href="javascript:window.print()">Print / Save as PDF</a>
           <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
         </div>
       </div>
-      <div class="contact">
+      <div class="cv-contact">
         Seoul, Republic of Korea<br />
         thsu1084@cau.ac.kr
       </div>
@@ -192,9 +181,6 @@ title: Youngseon Kim | CV
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>© 2026 Youngseon Kim</span>
-    <span>Multimodal AI · AI for Sports · Knowledge Grounding</span>
-  </footer>
+  {% include site-footer.html %}
 </body>
 </html>
