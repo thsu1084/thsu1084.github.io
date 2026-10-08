@@ -155,6 +155,58 @@ permalink: /
       .button:hover {
         filter: brightness(0.94);
       }
+      .profile-card {
+        background: var(--pale);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px #23304a12;
+      }
+      .profile-photo {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: 58% 38%;
+        display: block;
+      }
+      .profile-meta {
+        padding: 18px 20px 20px;
+      }
+      .profile-meta strong {
+        display: block;
+        font-size: 16px;
+      }
+      .profile-meta span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .conference-gallery {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 16px;
+      }
+      .conference-shot {
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--pale);
+      }
+      .conference-shot img {
+        width: 100%;
+        min-height: 260px;
+        max-height: 410px;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        display: block;
+      }
+      .conference-shot figcaption {
+        padding: 11px 14px 13px;
+        color: var(--muted);
+        font-size: 12px;
+        background: white;
+      }
       .visual {
         background: #f0f5ff;
         border: 1px solid #dce7ff;
@@ -456,6 +508,14 @@ permalink: /
         .visual {
           padding: 22px;
         }
+        .conference-gallery {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .conference-shot img {
+          min-height: 220px;
+          max-height: 360px;
+        }
         .strip {
           grid-template-columns: 1fr;
           gap: 15px;
@@ -553,18 +613,18 @@ permalink: /
             <a class="button" href="#work">대표 연구 살펴보기 ↓</a><a class="button secondary" href="https://github.com/thsu1084">GitHub ↗</a>
           </div>
         </div>
-        <div class="visual" aria-label="연구 관심 분야: 시각 정보와 외부 지식을 결합하는 멀티모달 추론">
-          <div class="small">RESEARCH FOCUS</div>
-          <div class="signal">
-            <b>V</b>
-            <div><strong>Visual understanding</strong><small>Video · Image · Context</small></div>
+        <div class="profile-card">
+          <img
+            class="profile-photo"
+            src="/assets/img/profile-youngseon.jpg"
+            alt="Youngseon Kim at CVPR 2026 CVSports"
+            width="1600"
+            height="1200"
+          />
+          <div class="profile-meta">
+            <strong>Youngseon Kim</strong>
+            <span>Multimodal AI · Computer Vision · RAG</span>
           </div>
-          <div class="signal">
-            <b>K</b>
-            <div><strong>Knowledge retrieval</strong><small>Domain knowledge · External evidence</small></div>
-          </div>
-          <div class="join" aria-hidden="true">↓</div>
-          <div class="answer">Grounded multimodal reasoning<small>시각적 단서에 필요한 지식을 더하다</small></div>
         </div>
       </div>
       <div class="strip">
@@ -621,6 +681,16 @@ permalink: /
             <p class="caption">CVSports @ CVPR 2026 · Research poster<br />포스터를 선택하면 원본을 볼 수 있습니다.</p>
           </div>
         </article>
+        <div class="conference-gallery" aria-label="CVPR 2026 CVSports conference photos">
+          <figure class="conference-shot">
+            <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports in Denver" loading="lazy" />
+            <figcaption>Presenting SetPieceRAG · CVSports @ CVPR 2026 · Denver</figcaption>
+          </figure>
+          <figure class="conference-shot">
+            <img src="/assets/img/cvpr2026-group.jpg" alt="CVPR 2026 CVSports workshop group photo" loading="lazy" />
+            <figcaption>CVSports community · CVPR 2026</figcaption>
+          </figure>
+        </div>
       </section>
       <section id="publications">
         <div class="section-head">
