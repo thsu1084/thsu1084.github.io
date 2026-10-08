@@ -134,6 +134,58 @@
       .button:hover {
         filter: brightness(0.94);
       }
+      .profile-card {
+        background: var(--pale);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px #23304a12;
+      }
+      .profile-photo {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        object-position: 58% 38%;
+        display: block;
+      }
+      .profile-meta {
+        padding: 18px 20px 20px;
+      }
+      .profile-meta strong {
+        display: block;
+        font-size: 16px;
+      }
+      .profile-meta span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .conference-gallery {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 16px;
+      }
+      .conference-shot {
+        margin: 0;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--pale);
+      }
+      .conference-shot img {
+        width: 100%;
+        min-height: 260px;
+        max-height: 410px;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        display: block;
+      }
+      .conference-shot figcaption {
+        padding: 11px 14px 13px;
+        color: var(--muted);
+        font-size: 12px;
+        background: white;
+      }
       .visual {
         background: #f0f5ff;
         border: 1px solid #dce7ff;
@@ -435,6 +487,14 @@
         .visual {
           padding: 22px;
         }
+        .conference-gallery {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .conference-shot img {
+          min-height: 220px;
+          max-height: 360px;
+        }
         .strip {
           grid-template-columns: 1fr;
           gap: 15px;
@@ -505,4 +565,4 @@
           color: #191f28;
         }
       }
-    </style> </head> <body> <a class="skip" href="#main">본문으로 이동</a> <header> <div class="nav"> <a class="brand" href="#">Youngseon Kim<span>.</span></a> <nav aria-label="주요 메뉴"> <a href="#work">Research</a><a href="#publications">Publications</a><a href="#about">About</a><a class="extra" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> </nav> </div> </header> <main id="main"> <div class="hero"> <div> <p class="eyebrow">AI Research &amp; Engineering</p> <h1>시각 정보와 지식을<br>연결하는 <em>AI를 연구합니다.</em> </h1> <p class="intro"> 영상 속 단서를 이해하고, 필요한 지식을 찾아 답변의 근거로 연결합니다. 멀티모달 모델과 검색 증강 생성으로 실제 영상 이해 문제를 풀고 있습니다. </p> <p class="identity"><strong>김영선 · Youngseon Kim</strong><br>중앙대학교 컴퓨터공학 석사과정</p> <div class="buttons"> <a class="button" href="#work">대표 연구 살펴보기 ↓</a><a class="button secondary" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> </div> </div> <div class="visual" aria-label="연구 관심 분야: 시각 정보와 외부 지식을 결합하는 멀티모달 추론"> <div class="small">RESEARCH FOCUS</div> <div class="signal"> <b>V</b> <div> <strong>Visual understanding</strong><small>Video · Image · Context</small> </div> </div> <div class="signal"> <b>K</b> <div> <strong>Knowledge retrieval</strong><small>Domain knowledge · External evidence</small> </div> </div> <div class="join" aria-hidden="true">↓</div> <div class="answer">Grounded multimodal reasoning<small>시각적 단서에 필요한 지식을 더하다</small> </div> </div> </div> <div class="strip"> <div> <strong>CVPR 2026 · CVSports</strong><span>SetPieceRAG · First author · Spotlight</span> </div> <div> <strong>ACCV 2026</strong><span>SoccerNet Challenges Results · Co-author</span> </div> <div> <strong>Multimodal AI × RAG</strong><span>Vision-language models · Video understanding</span> </div> </div> <section id="work"> <div class="section-head"> <div> <p class="eyebrow">01 / SELECTED WORK</p> <h2>대표 연구</h2> </div> <p>문제에서 출발해, 필요한 근거를 연결합니다.</p> </div> <article class="project"> <div class="project-copy"> <span class="badge">CVPR 2026 Workshop · Spotlight</span> <h3>SetPieceRAG</h3> <p class="subtitle">Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</p> <dl class="facts"> <dt>문제</dt> <dd>축구 영상만으로는 답하기 어려운 선수·팀·역사적 맥락에 관한 질문은 외부 지식이 필요합니다.</dd> <dt>접근</dt> <dd>CLIP 기반 시각 단서와 SoccerWiki 및 웹 검색을 연결하고, 검색한 근거를 멀티모달 모델의 응답에 활용합니다.</dd> <dt>연구 범위</dt> <dd>질문 유형에 맞춘 검색 증강, LoRA 기반 적응, 영상 전처리 등 다양한 접근을 SoccerNet VQA에서 평가했습니다.</dd> <dt>저자</dt> <dd> <strong>Youngseon Kim</strong>, Jongmin Lee · 제1저자</dd> </dl> <div class="tags"> <span>Multimodal RAG</span><span>CLIP</span><span>LoRA</span><span>Video QA</span> </div> <div class="buttons"> <a class="button" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html" rel="external nofollow noopener" target="_blank">논문 읽기 ↗</a><a class="button secondary" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" rel="external nofollow noopener" target="_blank">포스터 보기 ↗</a> </div> </div> <div class="project-art"> <a href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" aria-label="SetPieceRAG 연구 포스터 원본 보기" rel="external nofollow noopener" target="_blank"><img class="poster" src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG의 연구 방법과 평가 결과를 정리한 CVSports 학회 포스터" loading="lazy" width="1600" height="900"></a> <p class="caption">CVSports @ CVPR 2026 · Research poster<br>포스터를 선택하면 원본을 볼 수 있습니다.</p> </div> </article> </section> <section id="publications"> <div class="section-head"> <div> <p class="eyebrow">02 / PUBLICATIONS</p> <h2>논문 및 학술 발표</h2> </div> <p>공개된 연구와 확인 가능한 자료</p> </div> <article class="pub"> <div class="year">2026<br>CVPRW</div> <div> <h3>SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</h3> <p><strong>Youngseon Kim</strong>, Jongmin Lee</p> <p>CVPR Workshop on Computer Vision in Sports (CVSports) · Spotlight</p> </div> <a class="text-link" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html" rel="external nofollow noopener" target="_blank">Paper ↗</a> </article> <article class="pub"> <div class="year">2026<br>ACCV</div> <div> <h3>SoccerNet 2026 Challenges Results</h3> <p>Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee</p> <p>Asian Conference on Computer Vision · Co-author</p> </div> <a class="text-link" href="https://arxiv.org/abs/2607.07320" rel="external nofollow noopener" target="_blank">arXiv ↗</a> </article> </section> <section> <div class="section-head"> <div> <p class="eyebrow">03 / RESEARCH AREAS</p> <h2>집중하는 기술과 문제</h2> </div> </div> <div class="skills"> <article class="skill"> <span class="num">01</span> <h3>멀티모달 이해</h3> <p>이미지·영상과 언어를 함께 다루며, 실제 방송 영상의 복잡한 시각적 맥락을 이해하는 방법을 연구합니다.</p> <div class="tags"> <span>Computer Vision</span><span>VLMs</span><span>Video QA</span> </div> </article> <article class="skill"> <span class="num">02</span> <h3>지식 검색과 활용</h3> <p>모델 내부 지식만으로 부족한 질문을 분석하고, 도메인 지식과 검색 결과를 답변에 연결합니다.</p> <div class="tags"> <span>RAG</span><span>CLIP</span><span>Domain Knowledge</span> </div> </article> <article class="skill"> <span class="num">03</span> <h3>태스크별 모델 적응</h3> <p>질문과 입력 특성에 따라 파인튜닝·전처리·추론 방식을 선택하고, 벤치마크를 통해 효과를 비교합니다.</p> <div class="tags"> <span>LoRA</span><span>Preprocessing</span><span>Benchmarking</span> </div> </article> </div> </section> <section id="about" class="about"> <div> <p class="eyebrow">04 / ABOUT</p> <h2>Youngseon Kim</h2> <p>AI Research · Computer Engineering</p> </div> <div> <p> 중앙대학교 컴퓨터공학 석사과정에서 멀티모달 학습, 컴퓨터 비전, 시각-언어 모델을 연구하고 있습니다. 특히 영상의 시각적 정보에 외부 지식을 결합하는 연구에 관심이 있습니다. </p> <p>연구에서 다룬 검색·모델 적응·평가 경험을 바탕으로, 실제 문제에 도움이 되는 AI 시스템을 만드는 일을 지향합니다.</p> <div class="education"> <strong>Chung-Ang University</strong><span>M.S. Student · Computer Engineering<br>Advisor: Prof. Jongmin Lee</span> </div> <div class="buttons"> <a class="button secondary" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub 프로필 ↗</a><a class="text-link" href="https://bluedream1121.github.io/spatial-intelligence-lab/" rel="external nofollow noopener" target="_blank">Spatial Intelligence Lab ↗</a> </div> </div> </section> </main> <footer><span>© 2026 Youngseon Kim</span><span>Multimodal AI · Knowledge Grounding · Video Understanding</span></footer> </body> </html>
+    </style> </head> <body> <a class="skip" href="#main">본문으로 이동</a> <header> <div class="nav"> <a class="brand" href="#">Youngseon Kim<span>.</span></a> <nav aria-label="주요 메뉴"> <a href="#work">Research</a><a href="#publications">Publications</a><a href="#about">About</a><a class="extra" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> </nav> </div> </header> <main id="main"> <div class="hero"> <div> <p class="eyebrow">AI Research &amp; Engineering</p> <h1>시각 정보와 지식을<br>연결하는 <em>AI를 연구합니다.</em> </h1> <p class="intro"> 영상 속 단서를 이해하고, 필요한 지식을 찾아 답변의 근거로 연결합니다. 멀티모달 모델과 검색 증강 생성으로 실제 영상 이해 문제를 풀고 있습니다. </p> <p class="identity"><strong>김영선 · Youngseon Kim</strong><br>중앙대학교 컴퓨터공학 석사과정</p> <div class="buttons"> <a class="button" href="#work">대표 연구 살펴보기 ↓</a><a class="button secondary" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> </div> </div> <div class="profile-card"> <img class="profile-photo" src="/assets/img/profile-youngseon.jpg" alt="Youngseon Kim at CVPR 2026 CVSports" width="1600" height="1200"> <div class="profile-meta"> <strong>Youngseon Kim</strong> <span>Multimodal AI · Computer Vision · RAG</span> </div> </div> </div> <div class="strip"> <div> <strong>CVPR 2026 · CVSports</strong><span>SetPieceRAG · First author · Spotlight</span> </div> <div> <strong>ACCV 2026</strong><span>SoccerNet Challenges Results · Co-author</span> </div> <div> <strong>Multimodal AI × RAG</strong><span>Vision-language models · Video understanding</span> </div> </div> <section id="work"> <div class="section-head"> <div> <p class="eyebrow">01 / SELECTED WORK</p> <h2>대표 연구</h2> </div> <p>문제에서 출발해, 필요한 근거를 연결합니다.</p> </div> <article class="project"> <div class="project-copy"> <span class="badge">CVPR 2026 Workshop · Spotlight</span> <h3>SetPieceRAG</h3> <p class="subtitle">Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</p> <dl class="facts"> <dt>문제</dt> <dd>축구 영상만으로는 답하기 어려운 선수·팀·역사적 맥락에 관한 질문은 외부 지식이 필요합니다.</dd> <dt>접근</dt> <dd>CLIP 기반 시각 단서와 SoccerWiki 및 웹 검색을 연결하고, 검색한 근거를 멀티모달 모델의 응답에 활용합니다.</dd> <dt>연구 범위</dt> <dd>질문 유형에 맞춘 검색 증강, LoRA 기반 적응, 영상 전처리 등 다양한 접근을 SoccerNet VQA에서 평가했습니다.</dd> <dt>저자</dt> <dd> <strong>Youngseon Kim</strong>, Jongmin Lee · 제1저자</dd> </dl> <div class="tags"> <span>Multimodal RAG</span><span>CLIP</span><span>LoRA</span><span>Video QA</span> </div> <div class="buttons"> <a class="button" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html" rel="external nofollow noopener" target="_blank">논문 읽기 ↗</a><a class="button secondary" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" rel="external nofollow noopener" target="_blank">포스터 보기 ↗</a> </div> </div> <div class="project-art"> <a href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" aria-label="SetPieceRAG 연구 포스터 원본 보기" rel="external nofollow noopener" target="_blank"><img class="poster" src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG의 연구 방법과 평가 결과를 정리한 CVSports 학회 포스터" loading="lazy" width="1600" height="900"></a> <p class="caption">CVSports @ CVPR 2026 · Research poster<br>포스터를 선택하면 원본을 볼 수 있습니다.</p> </div> </article> <div class="conference-gallery" aria-label="CVPR 2026 CVSports conference photos"> <figure class="conference-shot"> <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports in Denver" loading="lazy"> <figcaption>Presenting SetPieceRAG · CVSports @ CVPR 2026 · Denver</figcaption> </figure> <figure class="conference-shot"> <img src="/assets/img/cvpr2026-group.jpg" alt="CVPR 2026 CVSports workshop group photo" loading="lazy"> <figcaption>CVSports community · CVPR 2026</figcaption> </figure> </div> </section> <section id="publications"> <div class="section-head"> <div> <p class="eyebrow">02 / PUBLICATIONS</p> <h2>논문 및 학술 발표</h2> </div> <p>공개된 연구와 확인 가능한 자료</p> </div> <article class="pub"> <div class="year">2026<br>CVPRW</div> <div> <h3>SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</h3> <p><strong>Youngseon Kim</strong>, Jongmin Lee</p> <p>CVPR Workshop on Computer Vision in Sports (CVSports) · Spotlight</p> </div> <a class="text-link" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html" rel="external nofollow noopener" target="_blank">Paper ↗</a> </article> <article class="pub"> <div class="year">2026<br>ACCV</div> <div> <h3>SoccerNet 2026 Challenges Results</h3> <p>Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee</p> <p>Asian Conference on Computer Vision · Co-author</p> </div> <a class="text-link" href="https://arxiv.org/abs/2607.07320" rel="external nofollow noopener" target="_blank">arXiv ↗</a> </article> </section> <section> <div class="section-head"> <div> <p class="eyebrow">03 / RESEARCH AREAS</p> <h2>집중하는 기술과 문제</h2> </div> </div> <div class="skills"> <article class="skill"> <span class="num">01</span> <h3>멀티모달 이해</h3> <p>이미지·영상과 언어를 함께 다루며, 실제 방송 영상의 복잡한 시각적 맥락을 이해하는 방법을 연구합니다.</p> <div class="tags"> <span>Computer Vision</span><span>VLMs</span><span>Video QA</span> </div> </article> <article class="skill"> <span class="num">02</span> <h3>지식 검색과 활용</h3> <p>모델 내부 지식만으로 부족한 질문을 분석하고, 도메인 지식과 검색 결과를 답변에 연결합니다.</p> <div class="tags"> <span>RAG</span><span>CLIP</span><span>Domain Knowledge</span> </div> </article> <article class="skill"> <span class="num">03</span> <h3>태스크별 모델 적응</h3> <p>질문과 입력 특성에 따라 파인튜닝·전처리·추론 방식을 선택하고, 벤치마크를 통해 효과를 비교합니다.</p> <div class="tags"> <span>LoRA</span><span>Preprocessing</span><span>Benchmarking</span> </div> </article> </div> </section> <section id="about" class="about"> <div> <p class="eyebrow">04 / ABOUT</p> <h2>Youngseon Kim</h2> <p>AI Research · Computer Engineering</p> </div> <div> <p> 중앙대학교 컴퓨터공학 석사과정에서 멀티모달 학습, 컴퓨터 비전, 시각-언어 모델을 연구하고 있습니다. 특히 영상의 시각적 정보에 외부 지식을 결합하는 연구에 관심이 있습니다. </p> <p>연구에서 다룬 검색·모델 적응·평가 경험을 바탕으로, 실제 문제에 도움이 되는 AI 시스템을 만드는 일을 지향합니다.</p> <div class="education"> <strong>Chung-Ang University</strong><span>M.S. Student · Computer Engineering<br>Advisor: Prof. Jongmin Lee</span> </div> <div class="buttons"> <a class="button secondary" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub 프로필 ↗</a><a class="text-link" href="https://bluedream1121.github.io/spatial-intelligence-lab/" rel="external nofollow noopener" target="_blank">Spatial Intelligence Lab ↗</a> </div> </div> </section> </main> <footer><span>© 2026 Youngseon Kim</span><span>Multimodal AI · Knowledge Grounding · Video Understanding</span></footer> </body> </html>
