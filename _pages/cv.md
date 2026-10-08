@@ -2,179 +2,290 @@
 layout: page
 permalink: /cv/
 title: CV
-nav: true
-nav_order: 5
+nav: false
 ---
 
 <style>
-.cv-wrap{max-width:920px;margin:0 auto;padding:10px 0 40px;color:#191f28}
-.cv-hero{display:grid;grid-template-columns:1fr 160px;gap:36px;align-items:center;padding:18px 0 28px;border-bottom:1px solid #e5eaf0}
-.cv-name{font-size:42px;line-height:1.1;letter-spacing:-1.8px;margin:0 0 10px;font-weight:800}
-.cv-role{font-size:17px;color:#586575;margin:0 0 14px}
-.cv-summary{font-size:15px;line-height:1.75;color:#586575;max-width:680px;margin:0}
-.cv-photo{width:150px;height:190px;object-fit:cover;object-position:center 25%;border-radius:16px;border:1px solid #e5eaf0;box-shadow:0 8px 24px #23304a10}
-.cv-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.cv-link{display:inline-block;padding:8px 12px;border-radius:8px;background:#f5f7fb;font-size:13px;font-weight:700}
-.cv-section{padding:30px 0 4px}
-.cv-section h2{font-size:23px;letter-spacing:-.5px;margin:0 0 16px}
-.cv-grid{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:15px 0;border-top:1px solid #eef1f4}
-.cv-grid:first-of-type{border-top:0}
-.cv-date{font-size:13px;color:#2463eb;font-weight:750}
-.cv-item h3{font-size:16px;margin:0 0 4px}
-.cv-item p{margin:3px 0;color:#586575;font-size:14px;line-height:1.65}
-.cv-item ul{margin:8px 0 0;padding-left:18px;color:#586575;font-size:14px;line-height:1.65}
-.cv-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
-.cv-tags span{font-size:12px;background:#f5f7fb;border-radius:6px;padding:5px 8px;color:#526070}
-.cv-pub{padding:17px 0;border-top:1px solid #eef1f4}
-.cv-pub:first-of-type{border-top:0}
-.cv-pub-title{font-weight:750;font-size:15px;line-height:1.55}
-.cv-pub-meta{font-size:13px;color:#586575;margin-top:4px}
-.cv-note{font-size:12px;color:#7b8794;margin-top:6px}
-@media(max-width:700px){
-  .cv-hero{grid-template-columns:1fr}
-  .cv-photo{width:130px;height:165px}
+.cv-page{
+  max-width:900px;
+  margin:0 auto;
+  padding:28px 10px 60px;
+  color:#191f28;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+}
+.cv-topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  margin-bottom:34px;
+}
+.cv-home{
+  font-size:13px;
+  font-weight:700;
+  color:#2463eb;
+}
+.cv-print{
+  font-size:13px;
+  font-weight:700;
+  color:#586575;
+}
+.cv-header{
+  padding-bottom:24px;
+  border-bottom:2px solid #191f28;
+}
+.cv-name{
+  font-size:42px;
+  line-height:1.05;
+  margin:0 0 8px;
+  letter-spacing:-1.8px;
+  font-weight:800;
+}
+.cv-subtitle{
+  font-size:16px;
+  font-weight:650;
+  margin:0 0 3px;
+}
+.cv-location{
+  font-size:14px;
+  color:#586575;
+  margin:0;
+}
+.cv-contact{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 18px;
+  font-size:13px;
+  color:#586575;
+}
+.cv-contact a{color:#2463eb}
+.cv-section{
+  display:grid;
+  grid-template-columns:185px 1fr;
+  gap:28px;
+  padding:26px 0;
+  border-bottom:1px solid #e5eaf0;
+}
+.cv-label{
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+.cv-body{
+  font-size:14px;
+  line-height:1.72;
+  color:#3d4855;
+}
+.cv-body p{margin:0 0 9px}
+.cv-entry{
+  margin-bottom:20px;
+}
+.cv-entry:last-child{margin-bottom:0}
+.cv-entry-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:baseline;
+  margin-bottom:4px;
+}
+.cv-entry-title{
+  font-weight:750;
+  color:#191f28;
+}
+.cv-date{
+  white-space:nowrap;
+  color:#586575;
+  font-size:13px;
+}
+.cv-role{
+  font-size:13px;
+  color:#586575;
+  margin-bottom:6px;
+}
+.cv-pub{
+  margin-bottom:14px;
+}
+.cv-pub:last-child{margin-bottom:0}
+.cv-pub-title{
+  color:#191f28;
+  font-weight:700;
+}
+.cv-small{
+  font-size:13px;
+  color:#586575;
+}
+.cv-skills{
+  display:grid;
+  grid-template-columns:135px 1fr;
+  gap:7px 16px;
+}
+.cv-skill-label{
+  font-weight:700;
+  color:#191f28;
+}
+@media(max-width:720px){
+  .cv-section{grid-template-columns:1fr;gap:10px}
+  .cv-entry-head{display:block}
+  .cv-date{display:block;margin-top:2px}
   .cv-name{font-size:34px}
-  .cv-grid{grid-template-columns:1fr;gap:6px}
+  .cv-skills{grid-template-columns:1fr}
+}
+@media print{
+  .cv-topbar{display:none}
+  .cv-page{max-width:none;padding:0}
+  .cv-section{break-inside:avoid}
 }
 </style>
 
-<div class="cv-wrap">
+<div class="cv-page">
 
-<div class="cv-hero">
-  <div>
+  <div class="cv-topbar">
+    <a class="cv-home" href="/">← Portfolio</a>
+    <a class="cv-print" href="javascript:window.print()">Print / Save as PDF</a>
+  </div>
+
+  <header class="cv-header">
     <h1 class="cv-name">Youngseon Kim</h1>
-    <p class="cv-role">M.S. Student in Computer Engineering · Chung-Ang University</p>
-    <p class="cv-summary">
-      AI researcher working on multimodal learning, computer vision, vision-language models,
-      video understanding, and retrieval-augmented generation. My research focuses on grounding
-      visual reasoning with external knowledge and building practical multimodal systems for
-      real-world video understanding.
-    </p>
-    <div class="cv-links">
-      <a class="cv-link" href="/">Portfolio</a>
-      <a class="cv-link" href="https://github.com/thsu1084">GitHub ↗</a>
-      <a class="cv-link" href="https://bluedream1121.github.io/spatial-intelligence-lab/">Spatial Intelligence Lab ↗</a>
+    <p class="cv-subtitle">M.S. Student, Department of Computer Science and Engineering</p>
+    <p class="cv-location">Chung-Ang University, Seoul, Republic of Korea</p>
+    <div class="cv-contact">
+      <span>E-mail: thsu1084@cau.ac.kr</span>
+      <a href="https://github.com/thsu1084">GitHub ↗</a>
+      <a href="/">Portfolio ↗</a>
     </div>
-  </div>
-  <img class="cv-photo" src="/assets/img/prof_pic.jpg" alt="Youngseon Kim" />
-</div>
+  </header>
 
-<section class="cv-section">
-  <h2>Research Interests</h2>
-  <div class="cv-tags">
-    <span>Multimodal AI</span>
-    <span>Computer Vision</span>
-    <span>Vision-Language Models</span>
-    <span>Video Understanding</span>
-    <span>Retrieval-Augmented Generation</span>
-    <span>Knowledge Grounding</span>
-  </div>
-</section>
-
-<section class="cv-section">
-  <h2>Education</h2>
-  <div class="cv-grid">
-    <div class="cv-date">M.S. · 2027 expected</div>
-    <div class="cv-item">
-      <h3>Chung-Ang University</h3>
-      <p>Computer Engineering</p>
-      <p>Advisor: Prof. Jongmin Lee</p>
+  <section class="cv-section">
+    <div class="cv-label">Research Areas</div>
+    <div class="cv-body">
+      <p><strong>Multimodal AI, Retrieval-Augmented Generation, Vision-Language Understanding, Medical AI</strong></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cv-section">
-  <h2>Selected Publications</h2>
-
-  <div class="cv-pub">
-    <div class="cv-pub-title">
-      SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models
-    </div>
-    <div class="cv-pub-meta">
-      <strong>Youngseon Kim</strong>, Jongmin Lee · CVPR 2026 Workshop on Computer Vision in Sports (CVSports) · Spotlight
-    </div>
-    <div class="cv-note">
-      <a href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
-    </div>
-  </div>
-
-  <div class="cv-pub">
-    <div class="cv-pub-title">SoccerNet 2026 Challenges Results</div>
-    <div class="cv-pub-meta">
-      Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee · ACCV 2026 · Co-author
-    </div>
-    <div class="cv-note">
-      <a href="https://arxiv.org/abs/2607.07320">Preprint ↗</a>
-    </div>
-  </div>
-</section>
-
-<section class="cv-section">
-  <h2>Selected Research</h2>
-
-  <div class="cv-grid">
-    <div class="cv-date">2026</div>
-    <div class="cv-item">
-      <h3>SetPieceRAG / SoccerPlaybook</h3>
+  <section class="cv-section">
+    <div class="cv-label">Research Interests</div>
+    <div class="cv-body">
       <p>
-        Task-adaptive knowledge grounding for soccer video question answering with multimodal large language models.
+        Reliable and knowledge-grounded AI for multimodal reasoning and high-stakes decision support,
+        with interests in domain-specific retrieval-augmented generation, vision-language understanding,
+        open-vocabulary object detection, and safe medical recommendation.
       </p>
-      <ul>
-        <li>Domain-specific RAG with visual retrieval and external soccer knowledge.</li>
-        <li>Task-dependent routing, fallback strategies, LoRA adaptation, and video preprocessing.</li>
-        <li>Evaluated on knowledge-intensive and perception-oriented soccer VQA settings.</li>
-      </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="cv-grid">
-    <div class="cv-date">2026</div>
-    <div class="cv-item">
-      <h3>SoccerCanon</h3>
-      <p>
-        Benchmark and training-free aggregation framework for canonical player identity recognition
-        from challenging soccer broadcast imagery.
-      </p>
-      <ul>
-        <li>Combines face, appearance, kit, and jersey-number evidence.</li>
-        <li>Studies uncertainty-aware aggregation and rank fusion under incomplete visual evidence.</li>
-      </ul>
+  <section class="cv-section">
+    <div class="cv-label">Education</div>
+    <div class="cv-body">
+      <div class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">Chung-Ang University</div>
+          <div class="cv-date">2025 – Present</div>
+        </div>
+        <div class="cv-role">M.S. Student, Department of Computer Science and Engineering</div>
+        <p>
+          Advisor: Prof. Jongmin Lee. Research area: multimodal AI, retrieval-augmented generation,
+          vision-language understanding, open-vocabulary object detection, and safe medication recommendation.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cv-section">
-  <h2>Honors & Support</h2>
-  <div class="cv-grid">
-    <div class="cv-date">2026</div>
-    <div class="cv-item">
-      <h3>CVSports @ CVPR 2026</h3>
-      <p>Spotlight presentation for SetPieceRAG.</p>
+  <section class="cv-section">
+    <div class="cv-label">Publications & Manuscripts</div>
+    <div class="cv-body">
+      <div class="cv-pub">
+        <div class="cv-pub-title">
+          Youngseon Kim and Jongmin Lee, “SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models.”
+        </div>
+        <div class="cv-small">CVSPORTS Workshop, CVPR, 2026 · Accepted</div>
+      </div>
+      <div class="cv-pub">
+        <div class="cv-pub-title">
+          Youngseon Kim, “Training-Free Textual Prescription Refinement for Safe Medication Recommendation.”
+        </div>
+        <div class="cv-small">Submitted to NeurIPS 2026 · Under Review</div>
+      </div>
     </div>
-  </div>
-  <div class="cv-grid">
-    <div class="cv-date">Graduate</div>
-    <div class="cv-item">
-      <h3>Research Support</h3>
-      <p>NRF Master's Research Fellowship · WISET research support.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="cv-section">
-  <h2>Technical Skills</h2>
-  <div class="cv-grid">
-    <div class="cv-date">ML / Vision</div>
-    <div class="cv-item">
-      <p>PyTorch · CLIP / OpenCLIP · Vision-Language Models · LoRA · RAG · FAISS · Multimodal Evaluation</p>
+  <section class="cv-section">
+    <div class="cv-label">Funded Research & Fellowship</div>
+    <div class="cv-body">
+      <div class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">National Research Foundation of Korea Master’s Student Research Fellowship</div>
+          <div class="cv-date">2025 – Present</div>
+        </div>
+        <div class="cv-role">Master’s Student Researcher</div>
+        <p>
+          Selected for the NRF Master’s Student Research Fellowship in the science and engineering field.
+          Research topic: “A Study on Object Detection using Open-Vocabulary Classification based on Natural Language Descriptions,”
+          focusing on natural-language-driven open-vocabulary object detection and RoI-level visual-text matching.
+        </p>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">WISET Women Graduate Student Engineering Research Team Program</div>
+          <div class="cv-date">Apr. 2025 – Oct. 2025</div>
+        </div>
+        <div class="cv-role">Research Lead, Chung-Ang University</div>
+        <p>
+          Led a funded research team project titled “Intelligent Text-Linked Suspect Tracking System Using Multimodal AI.”
+          Managed research planning, experiment design, team coordination, result analysis, and report preparation.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="cv-grid">
-    <div class="cv-date">Research</div>
-    <div class="cv-item">
-      <p>Benchmark design · Ablation studies · Retrieval systems · Video QA · Experimental analysis · Academic writing</p>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-label">Challenge Experience</div>
+    <div class="cv-body">
+      <div class="cv-entry">
+        <div class="cv-entry-head">
+          <div class="cv-entry-title">SoccerNet Challenge 2026 – Visual Question Answering</div>
+          <div class="cv-date">2026</div>
+        </div>
+        <div class="cv-role">Participant</div>
+        <p>
+          Ranked 15th out of 143 participants on the official challenge leaderboard.
+          Developed a task-specific soccer VQA system combining domain-specific retrieval-augmented generation,
+          CLIP-based entity grounding, external knowledge integration, LLM ensembling, LoRA-based adaptation,
+          super-resolution preprocessing, and object-centric video analysis.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-label">Technical Skills</div>
+    <div class="cv-body">
+      <div class="cv-skills">
+        <div class="cv-skill-label">Programming</div>
+        <div>Python, Java, SQL, Bash, LaTeX</div>
+
+        <div class="cv-skill-label">Deep Learning</div>
+        <div>PyTorch, Hugging Face Transformers, PEFT, LoRA, Unsloth</div>
+
+        <div class="cv-skill-label">Vision-Language / RAG</div>
+        <div>CLIP, InternVL, Qwen-VL, Gemini, FAISS, vector databases, prompt engineering</div>
+
+        <div class="cv-skill-label">Computer Vision</div>
+        <div>Open-vocabulary object detection, visual retrieval, object tracking, Re-ID, super-resolution, SAHI</div>
+
+        <div class="cv-skill-label">Medical AI</div>
+        <div>MIMIC-III, medication recommendation, DDI-aware evaluation, clinical note processing</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-label">Language Skills</div>
+    <div class="cv-body">
+      <p><strong>Korean:</strong> Native &nbsp;&nbsp; <strong>English:</strong> Professional research reading and writing</p>
+    </div>
+  </section>
 
 </div>
