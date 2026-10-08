@@ -1,233 +1,201 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> CV | Youngseon Kim </title> <meta name="author" content="Youngseon Kim"> <meta name="description" content="Youngseon Kim — Multimodal AI, computer vision, and retrieval-augmented generation. "> <meta name="keywords" content="multimodal-ai, computer-vision, rag, youngseon-kim"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
-  :root {
-    --max-content-width: 930px;
-  }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://thsu1084.github.io/cv/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
-    initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Youngseon Kim </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Youngseon Kim | AI Research &amp; Engineering </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">CV</h1> <p class="post-description"></p> </header> <article> <style>
-.cv-page{
-  max-width:900px;
-  margin:0 auto;
-  padding:28px 10px 60px;
-  color:#191f28;
-  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
-}
-.cv-topbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:18px;
-  margin-bottom:34px;
-}
-.cv-home{
-  font-size:13px;
-  font-weight:700;
-  color:#2463eb;
-}
-.cv-print{
-  font-size:13px;
-  font-weight:700;
-  color:#586575;
-}
-.cv-header{
-  padding-bottom:24px;
-  border-bottom:2px solid #191f28;
-}
-.cv-name{
-  font-size:42px;
-  line-height:1.05;
-  margin:0 0 8px;
-  letter-spacing:-1.8px;
-  font-weight:800;
-}
-.cv-subtitle{
-  font-size:16px;
-  font-weight:650;
-  margin:0 0 3px;
-}
-.cv-location{
-  font-size:14px;
-  color:#586575;
-  margin:0;
-}
-.cv-contact{
-  margin-top:14px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 18px;
-  font-size:13px;
-  color:#586575;
-}
-.cv-contact a{color:#2463eb}
-.cv-section{
-  display:grid;
-  grid-template-columns:185px 1fr;
-  gap:28px;
-  padding:26px 0;
-  border-bottom:1px solid #e5eaf0;
-}
-.cv-label{
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-}
-.cv-body{
-  font-size:14px;
-  line-height:1.72;
-  color:#3d4855;
-}
-.cv-body p{margin:0 0 9px}
-.cv-entry{
-  margin-bottom:20px;
-}
-.cv-entry:last-child{margin-bottom:0}
-.cv-entry-head{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:baseline;
-  margin-bottom:4px;
-}
-.cv-entry-title{
-  font-weight:750;
-  color:#191f28;
-}
-.cv-date{
-  white-space:nowrap;
-  color:#586575;
-  font-size:13px;
-}
-.cv-role{
-  font-size:13px;
-  color:#586575;
-  margin-bottom:6px;
-}
-.cv-pub{
-  margin-bottom:14px;
-}
-.cv-pub:last-child{margin-bottom:0}
-.cv-pub-title{
-  color:#191f28;
-  font-weight:700;
-}
-.cv-small{
-  font-size:13px;
-  color:#586575;
-}
-.cv-skills{
-  display:grid;
-  grid-template-columns:135px 1fr;
-  gap:7px 16px;
-}
-.cv-skill-label{
-  font-weight:700;
-  color:#191f28;
-}
-@media(max-width:720px){
-  .cv-section{grid-template-columns:1fr;gap:10px}
-  .cv-entry-head{display:block}
-  .cv-date{display:block;margin-top:2px}
-  .cv-name{font-size:34px}
-  .cv-skills{grid-template-columns:1fr}
-}
-@media print{
-  .cv-topbar{display:none}
-  .cv-page{max-width:none;padding:0}
-  .cv-section{break-inside:avoid}
-}
-</style> <div class="cv-page"> <div class="cv-topbar"> <a class="cv-home" href="/">← Portfolio</a> <a class="cv-print" href="javascript:window.print()">Print / Save as PDF</a> </div> <header class="cv-header"> <h1 class="cv-name">Youngseon Kim</h1> <p class="cv-subtitle">M.S. Student, Department of Computer Science and Engineering</p> <p class="cv-location">Chung-Ang University, Seoul, Republic of Korea</p> <div class="cv-contact"> <span>E-mail: thsu1084@cau.ac.kr</span> <a href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> <a href="/">Portfolio ↗</a> </div> </header> <section class="cv-section"> <div class="cv-label">Research Areas</div> <div class="cv-body"> <p><strong>Multimodal AI, Retrieval-Augmented Generation, Vision-Language Understanding, Medical AI</strong></p> </div> </section> <section class="cv-section"> <div class="cv-label">Research Interests</div> <div class="cv-body"> <p> Reliable and knowledge-grounded AI for multimodal reasoning and high-stakes decision support, with interests in domain-specific retrieval-augmented generation, vision-language understanding, open-vocabulary object detection, and safe medical recommendation. </p> </div> </section> <section class="cv-section"> <div class="cv-label">Education</div> <div class="cv-body"> <div class="cv-entry"> <div class="cv-entry-head"> <div class="cv-entry-title">Chung-Ang University</div> <div class="cv-date">2025 – Present</div> </div> <div class="cv-role">M.S. Student, Department of Computer Science and Engineering</div> <p> Advisor: Prof. Jongmin Lee. Research area: multimodal AI, retrieval-augmented generation, vision-language understanding, open-vocabulary object detection, and safe medication recommendation. </p> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Publications &amp; Manuscripts</div> <div class="cv-body"> <div class="cv-pub"> <div class="cv-pub-title"> Youngseon Kim and Jongmin Lee, “SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models.” </div> <div class="cv-small">CVSPORTS Workshop, CVPR, 2026 · Accepted</div> </div> <div class="cv-pub"> <div class="cv-pub-title"> Youngseon Kim, “Training-Free Textual Prescription Refinement for Safe Medication Recommendation.” </div> <div class="cv-small">Submitted to NeurIPS 2026 · Under Review</div> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Funded Research &amp; Fellowship</div> <div class="cv-body"> <div class="cv-entry"> <div class="cv-entry-head"> <div class="cv-entry-title">National Research Foundation of Korea Master’s Student Research Fellowship</div> <div class="cv-date">2025 – Present</div> </div> <div class="cv-role">Master’s Student Researcher</div> <p> Selected for the NRF Master’s Student Research Fellowship in the science and engineering field. Research topic: “A Study on Object Detection using Open-Vocabulary Classification based on Natural Language Descriptions,” focusing on natural-language-driven open-vocabulary object detection and RoI-level visual-text matching. </p> </div> <div class="cv-entry"> <div class="cv-entry-head"> <div class="cv-entry-title">WISET Women Graduate Student Engineering Research Team Program</div> <div class="cv-date">Apr. 2025 – Oct. 2025</div> </div> <div class="cv-role">Research Lead, Chung-Ang University</div> <p> Led a funded research team project titled “Intelligent Text-Linked Suspect Tracking System Using Multimodal AI.” Managed research planning, experiment design, team coordination, result analysis, and report preparation. </p> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Challenge Experience</div> <div class="cv-body"> <div class="cv-entry"> <div class="cv-entry-head"> <div class="cv-entry-title">SoccerNet Challenge 2026 – Visual Question Answering</div> <div class="cv-date">2026</div> </div> <div class="cv-role">Participant</div> <p> Ranked 15th out of 143 participants on the official challenge leaderboard. Developed a task-specific soccer VQA system combining domain-specific retrieval-augmented generation, CLIP-based entity grounding, external knowledge integration, LLM ensembling, LoRA-based adaptation, super-resolution preprocessing, and object-centric video analysis. </p> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Technical Skills</div> <div class="cv-body"> <div class="cv-skills"> <div class="cv-skill-label">Programming</div> <div>Python, Java, SQL, Bash, LaTeX</div> <div class="cv-skill-label">Deep Learning</div> <div>PyTorch, Hugging Face Transformers, PEFT, LoRA, Unsloth</div> <div class="cv-skill-label">Vision-Language / RAG</div> <div>CLIP, InternVL, Qwen-VL, Gemini, FAISS, vector databases, prompt engineering</div> <div class="cv-skill-label">Computer Vision</div> <div>Open-vocabulary object detection, visual retrieval, object tracking, Re-ID, super-resolution, SAHI</div> <div class="cv-skill-label">Medical AI</div> <div>MIMIC-III, medication recommendation, DDI-aware evaluation, clinical note processing</div> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Language Skills</div> <div class="cv-body"> <p><strong>Korean:</strong> Native    <strong>English:</strong> Professional research reading and writing</p> </div> </section> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Youngseon Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
-  window.alFolio = {
-    compatBootstrap: false
-  };
-</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
-    addBackToTop();
-  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
-// get the ninja-keys element
-const ninja = document.querySelector('ninja-keys');
-
-// add the home and posts menu items
-ninja.data = [{
-    id: "nav-youngseon-kim-ai-research-engineering",
-    title: "Youngseon Kim | AI Research & Engineering",
-    section: "Navigation",
-    handler: () => {
-      window.location.href = "/";
-    },
-  },{id: "nav-publications",
-          title: "publications",
-          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
-          },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "Selected research in multimodal AI and knowledge-grounded video understanding.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
-        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
-      },{id: "projects-setpiecerag",
-          title: 'SetPieceRAG',
-          description: "Domain-specific retrieval-augmented generation for soccer video question answering.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/setpiecerag/";
-            },},{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/thsu1084", "_blank");
-        },
-      },{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
-
-</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <p>&lt;!doctype html&gt;</p> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Youngseon Kim · CV</title> <meta name="description" content="Curriculum Vitae of Youngseon Kim, M.S. student at Chung-Ang University working on Multimodal AI, AI for Sports, RAG, and Vision-Language Understanding."> <style>
+    :root{
+      --ink:#191f28;
+      --muted:#586575;
+      --blue:#2463eb;
+      --line:#e5eaf0;
+      --pale:#f5f7fb;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.72;
+    }
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+    header{
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.97);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .nav{
+      max-width:1120px;
+      margin:auto;
+      padding:20px 28px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+    .brand{font-weight:800;letter-spacing:-.5px}
+    .brand span{color:var(--blue)}
+    nav{display:flex;gap:28px;font-size:14px;font-weight:600}
+    nav a:hover{color:var(--blue)}
+    nav .active{color:var(--blue)}
+    main{
+      max-width:1120px;
+      margin:auto;
+      padding:0 28px 70px;
+    }
+    .cv-intro{
+      padding:78px 0 42px;
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:end;
+    }
+    .eyebrow{
+      font-size:12px;
+      font-weight:750;
+      letter-spacing:2px;
+      color:var(--blue);
+      text-transform:uppercase;
+      margin:0 0 14px;
+    }
+    h1{
+      font-size:clamp(38px,5vw,56px);
+      line-height:1.12;
+      letter-spacing:-2px;
+      margin:0 0 12px;
+    }
+    .role{
+      margin:0;
+      font-size:17px;
+      color:var(--muted);
+    }
+    .contact{
+      text-align:right;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.8;
+      white-space:nowrap;
+    }
+    .contact a{color:var(--blue);font-weight:650}
+    .cv-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 16px;
+      border-radius:9px;
+      font-size:13px;
+      font-weight:700;
+      background:var(--pale);
+    }
+    .button.primary{background:var(--blue);color:#fff}
+    .cv-section{
+      display:grid;
+      grid-template-columns:190px minmax(0,1fr);
+      gap:34px;
+      padding:30px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .cv-label{
+      font-size:12px;
+      color:var(--blue);
+      font-weight:800;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+      padding-top:3px;
+    }
+    .cv-body{font-size:14px;color:#3f4b59}
+    .cv-body p{margin:0 0 9px}
+    .cv-body p:last-child{margin-bottom:0}
+    .focus-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .focus-list span{
+      background:var(--pale);
+      color:#465464;
+      border-radius:6px;
+      padding:6px 10px;
+      font-size:12px;
+      font-weight:650;
+    }
+    .entry{margin-bottom:24px}
+    .entry:last-child{margin-bottom:0}
+    .entry-head{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:baseline;
+      margin-bottom:3px;
+    }
+    .entry-title{
+      color:var(--ink);
+      font-size:15px;
+      font-weight:780;
+      line-height:1.5;
+    }
+    .entry-date{
+      flex:0 0 auto;
+      color:#7b8794;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .entry-role{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .publication{
+      padding:0 0 20px;
+      margin:0 0 20px;
+      border-bottom:1px solid #eef1f4;
+    }
+    .publication:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+    .pub-title{
+      color:var(--ink);
+      font-size:15px;
+      font-weight:750;
+      line-height:1.55;
+    }
+    .pub-meta{margin-top:5px;font-size:13px;color:var(--muted)}
+    .pub-links{margin-top:6px;font-size:12px;font-weight:700;color:var(--blue)}
+    .skills{
+      display:grid;
+      grid-template-columns:150px minmax(0,1fr);
+      gap:8px 18px;
+    }
+    .skill-name{font-weight:750;color:var(--ink)}
+    footer{
+      max-width:1120px;
+      margin:auto;
+      padding:30px 28px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      font-size:12px;
+      color:var(--muted);
+    }
+    @media(max-width:760px){
+      .nav{padding:16px 20px}
+      nav{gap:15px;font-size:12px}
+      nav .extra{display:none}
+      main{padding:0 20px 50px}
+      .cv-intro{padding:52px 0 30px;display:block}
+      .contact{text-align:left;margin-top:22px;white-space:normal}
+      .cv-section{grid-template-columns:1fr;gap:10px;padding:24px 0}
+      .entry-head{display:block}
+      .entry-date{display:block;margin-top:3px}
+      .skills{grid-template-columns:1fr;gap:3px}
+      .skill-name{margin-top:8px}
+      footer{padding:26px 20px;flex-direction:column;gap:4px}
+    }
+    @media print{
+      header,.cv-actions,footer{display:none}
+      main{max-width:none;padding:0}
+      .cv-intro{padding:20px 0 24px}
+      .cv-section{padding:18px 0;break-inside:avoid}
+    }
+  </style> <header> <div class="nav"> <a class="brand" href="/">Youngseon Kim<span>.</span></a> <nav aria-label="Primary navigation"> <a href="/#work">Research</a> <a href="/#publications">Publications</a> <a href="/#about">About</a> <a class="active" href="/cv/">CV</a> <a class="extra" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> </nav> </div> </header> <main> <section class="cv-intro"> <div> <p class="eyebrow">Curriculum Vitae</p> <h1>Youngseon Kim</h1> <p class="role">M.S. Student · Computer Science and Engineering · Chung-Ang University</p> <div class="cv-actions"> <a class="button primary" href="/">Portfolio</a> <a class="button" href="javascript:window.print()">Print / Save as PDF</a> <a class="button" href="https://github.com/thsu1084" rel="external nofollow noopener" target="_blank">GitHub ↗</a> </div> </div> <div class="contact"> Seoul, Republic of Korea<br> thsu1084@cau.ac.kr </div> </section> <section class="cv-section"> <div class="cv-label">Research Areas</div> <div class="cv-body"> <div class="focus-list"> <span>Multimodal AI</span> <span>AI for Sports</span> <span>Retrieval-Augmented Generation</span> <span>Vision-Language Understanding</span> <span>Computer Vision</span> <span>Video Understanding</span> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Research Interests</div> <div class="cv-body"> <p> Reliable and knowledge-grounded multimodal AI for real-world visual understanding, with a particular interest in AI for sports. My work focuses on domain-specific retrieval-augmented generation, vision-language understanding, video question answering, visual retrieval, and task-adaptive multimodal reasoning. </p> </div> </section> <section class="cv-section"> <div class="cv-label">Education</div> <div class="cv-body"> <div class="entry"> <div class="entry-head"> <div class="entry-title">Chung-Ang University</div> <div class="entry-date">2025 – Present</div> </div> <div class="entry-role">M.S. Student, Department of Computer Science and Engineering</div> <p>Advisor: Prof. Jongmin Lee</p> <p> Research areas: multimodal AI, AI for sports, retrieval-augmented generation, vision-language understanding, and computer vision. </p> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Publications</div> <div class="cv-body"> <div class="publication"> <div class="pub-title"> SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models </div> <div class="pub-meta"> <strong>Youngseon Kim</strong>, Jongmin Lee · CVSports Workshop @ CVPR 2026 · Spotlight </div> <div class="pub-links"> <a href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html" rel="external nofollow noopener" target="_blank">Paper ↗</a> </div> </div> <div class="publication"> <div class="pub-title">SoccerNet 2026 Challenges Results</div> <div class="pub-meta"> Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee · Asian Conference on Computer Vision (ACCV) 2026 · Co-author </div> <div class="pub-links"> <a href="https://arxiv.org/abs/2607.07320" rel="external nofollow noopener" target="_blank">Preprint ↗</a> </div> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Funded Research</div> <div class="cv-body"> <div class="entry"> <div class="entry-head"> <div class="entry-title">National Research Foundation of Korea Master’s Student Research Fellowship</div> <div class="entry-date">2025 – Present</div> </div> <div class="entry-role">Master’s Student Researcher</div> <p> Selected for the NRF Master’s Student Research Fellowship in the science and engineering field. Research on natural-language-driven open-vocabulary object detection and RoI-level visual-text matching. </p> </div> <div class="entry"> <div class="entry-head"> <div class="entry-title">WISET Women Graduate Student Engineering Research Team Program</div> <div class="entry-date">Apr. 2025 – Oct. 2025</div> </div> <div class="entry-role">Research Lead, Chung-Ang University</div> <p> Led a funded multimodal AI research project and managed research planning, experiment design, team coordination, result analysis, and report preparation. </p> </div> </div> </section> <section class="cv-section"> <div class="cv-label">AI for Sports</div> <div class="cv-body"> <div class="entry"> <div class="entry-head"> <div class="entry-title">SoccerNet Challenge 2026 · Visual Question Answering</div> <div class="entry-date">2026</div> </div> <div class="entry-role">15th / 143 participants</div> <p> Developed a task-specific soccer VQA system combining domain-specific RAG, CLIP-based entity grounding, external knowledge integration, LLM ensembling, LoRA adaptation, super-resolution preprocessing, and object-centric video analysis. </p> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Technical Skills</div> <div class="cv-body"> <div class="skills"> <div class="skill-name">Programming</div> <div>Python, Java, SQL, Bash, LaTeX</div> <div class="skill-name">Deep Learning</div> <div>PyTorch, Hugging Face Transformers, PEFT, LoRA, Unsloth</div> <div class="skill-name">Vision-Language / RAG</div> <div>CLIP, InternVL, Qwen-VL, Gemini, FAISS, vector databases, prompt engineering</div> <div class="skill-name">Computer Vision</div> <div>Open-vocabulary object detection, visual retrieval, object tracking, Re-ID, super-resolution, SAHI</div> <div class="skill-name">AI for Sports</div> <div>Video understanding, soccer VQA, knowledge grounding, player-centric visual analysis</div> </div> </div> </section> <section class="cv-section"> <div class="cv-label">Languages</div> <div class="cv-body"> <p><strong>Korean:</strong> Native    <strong>English:</strong> Professional research reading and writing</p> </div> </section> </main> <footer> <span>© 2026 Youngseon Kim</span> <span>Multimodal AI · AI for Sports · Knowledge Grounding</span> </footer> </body></html>
