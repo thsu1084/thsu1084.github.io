@@ -76,8 +76,8 @@
       .hero {
         padding: 100px 0 75px;
         display: grid;
-        grid-template-columns: 1.45fr 1fr;
-        gap: 60px;
+        grid-template-columns: minmax(0, 1.65fr) minmax(220px, 0.55fr);
+        gap: 64px;
         align-items: center;
       }
       .eyebrow {
@@ -135,18 +135,21 @@
         filter: brightness(0.94);
       }
       .profile-card {
-        background: var(--pale);
+        width: min(100%, 300px);
+        justify-self: end;
+        background: #fff;
         border: 1px solid var(--line);
-        border-radius: 24px;
-        overflow: hidden;
-        box-shadow: 0 16px 40px #23304a12;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 12px 32px #23304a10;
       }
       .profile-photo {
         width: 100%;
-        aspect-ratio: 4 / 5;
-        object-fit: cover;
-        object-position: 58% 38%;
+        aspect-ratio: 3 / 4;
+        object-fit: contain;
+        object-position: center 30%;
         display: block;
+        border-radius: 12px;
       }
       .profile-meta {
         padding: 18px 20px 20px;
@@ -160,10 +163,10 @@
         font-size: 12px;
       }
       .conference-gallery {
-        margin-top: 24px;
+        margin-top: 28px;
         display: grid;
-        grid-template-columns: 1.35fr 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
       }
       .conference-shot {
         margin: 0;
