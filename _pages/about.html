@@ -6,772 +6,602 @@ permalink: /
 
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Youngseon Kim · AI Research & Engineering</title>
-    <meta
-      name="description"
-      content="김영선 · 중앙대학교 컴퓨터공학 석사과정. Multimodal AI, Vision-Language Models, Retrieval-Augmented Generation 연구 포트폴리오."
-    />
-    <meta property="og:title" content="Youngseon Kim · AI Research & Engineering" />
-    <meta property="og:description" content="시각 정보와 지식을 연결하는 AI를 연구합니다. SetPieceRAG · CVPR 2026 CVSports Spotlight." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thsu1084.github.io/" />
-    <link rel="canonical" href="https://thsu1084.github.io/" />
-    <style>
-      :root {
-        --ink: #191f28;
-        --muted: #586575;
-        --blue: #2463eb;
-        --line: #e5eaf0;
-        --pale: #f5f7fb;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 90px;
-      }
-      body {
-        margin: 0;
-        font-family:
-          Inter,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          "Noto Sans KR",
-          sans-serif;
-        color: var(--ink);
-        background: #fff;
-        line-height: 1.75;
-        word-break: keep-all;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      a:focus-visible {
-        outline: 3px solid var(--blue);
-        outline-offset: 5px;
-      }
-      header {
-        border-bottom: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.97);
-        position: sticky;
-        top: 0;
-        z-index: 10;
-      }
-      .nav {
-        max-width: 1120px;
-        margin: auto;
-        padding: 20px 28px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-      }
-      .brand {
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-      .brand span {
-        color: var(--blue);
-      }
-      nav {
-        display: flex;
-        gap: 28px;
-        font-size: 14px;
-        font-weight: 600;
-      }
-      nav a:hover,
-      .text-link:hover {
-        color: var(--blue);
-      }
-      main {
-        max-width: 1120px;
-        margin: auto;
-        padding: 0 28px;
-      }
-      .hero {
-        padding: 100px 0 75px;
-        display: grid;
-        grid-template-columns: minmax(0, 1.65fr) minmax(220px, 0.55fr);
-        gap: 64px;
-        align-items: center;
-      }
-      .eyebrow {
-        font-size: 12px;
-        font-weight: 750;
-        letter-spacing: 2px;
-        color: var(--blue);
-        text-transform: uppercase;
-        margin: 0 0 20px;
-      }
-      h1 {
-        font-size: clamp(36px, 4.5vw, 58px);
-        line-height: 1.22;
-        letter-spacing: -2.5px;
-        margin: 0 0 25px;
-      }
-      h1 em {
-        font-style: normal;
-        color: var(--blue);
-      }
-      .intro {
-        font-size: 17px;
-        color: var(--muted);
-        max-width: 550px;
-      }
-      .identity {
-        font-size: 15px;
-        margin: 24px 0;
-      }
-      .identity strong {
-        font-size: 19px;
-      }
-      .buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 28px;
-      }
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 21px;
-        border-radius: 10px;
-        background: var(--blue);
-        color: white;
-        font-size: 14px;
-        font-weight: 700;
-      }
-      .button.secondary {
-        background: var(--pale);
-        color: var(--ink);
-      }
-      .button:hover {
-        filter: brightness(0.94);
-      }
-      .profile-card {
-        width: min(100%, 300px);
-        height: fit-content;
-        align-self: center;
-        justify-self: end;
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 7px;
-        box-shadow: 0 12px 32px #23304a10;
-        overflow: hidden;
-      }
-      .profile-photo {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 12px;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Youngseon Kim · AI Research & Engineering</title>
+  <meta name="description" content="김영선 · 중앙대학교 컴퓨터공학 석사과정. Multimodal AI, AI for Sports, Retrieval-Augmented Generation 연구 포트폴리오." />
+  <meta property="og:title" content="Youngseon Kim · AI Research & Engineering" />
+  <meta property="og:description" content="Multimodal AI, AI for Sports, RAG, and video understanding." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thsu1084.github.io/" />
+  <link rel="canonical" href="https://thsu1084.github.io/" />
 
-      .conference-gallery {
-        margin-top: 28px;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
+  <style>
+    :root{
+      --ink:#191f28;
+      --muted:#667384;
+      --blue:#2463eb;
+      --line:#e8edf3;
+      --pale:#f6f8fb;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{
+      margin:0;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.72;
+      word-break:keep-all;
+    }
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:auto;
+      padding:18px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      font-size:15px;
+      font-weight:800;
+      letter-spacing:-.4px;
+    }
+    .brand span{color:var(--blue)}
+    nav{
+      display:flex;
+      gap:24px;
+      align-items:center;
+      font-size:13px;
+      font-weight:650;
+    }
+    nav a:hover{color:var(--blue)}
+    main{
+      max-width:var(--max);
+      margin:auto;
+      padding:0 24px 72px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:minmax(0,1.5fr) 250px;
+      gap:72px;
+      align-items:center;
+      padding:86px 0 72px;
+    }
+    .eyebrow{
+      margin:0 0 14px;
+      color:var(--blue);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:1.8px;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:0 0 20px;
+      font-size:clamp(38px,5vw,58px);
+      line-height:1.18;
+      letter-spacing:-2.5px;
+    }
+    h1 em{font-style:normal;color:var(--blue)}
+    .intro{
+      max-width:620px;
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .identity{
+      margin:24px 0 0;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .identity strong{
+      color:var(--ink);
+      display:block;
+      font-size:18px;
+      margin-bottom:2px;
+    }
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:26px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:42px;
+      padding:0 16px;
+      border-radius:9px;
+      background:var(--pale);
+      font-size:13px;
+      font-weight:750;
+    }
+    .btn.primary{background:var(--blue);color:#fff}
+    .profile{
+      width:100%;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:7px;
+      box-shadow:0 14px 38px rgba(35,48,74,.08);
+      background:#fff;
+    }
+    .profile img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+    }
+
+    .quick{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .quick-item{
+      padding:20px 20px 20px 0;
+    }
+    .quick-item + .quick-item{
+      padding-left:24px;
+      border-left:1px solid var(--line);
+    }
+    .quick strong{
+      display:block;
+      font-size:14px;
+      margin-bottom:2px;
+    }
+    .quick span{
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    section{
+      padding:68px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .section-title{
+      display:grid;
+      grid-template-columns:160px 1fr;
+      gap:30px;
+      margin-bottom:30px;
+      align-items:start;
+    }
+    .section-index{
+      color:var(--blue);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      padding-top:7px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size:30px;
+      letter-spacing:-1px;
+    }
+    .section-title p{
+      margin:7px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .research{
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);
+      gap:32px;
+      align-items:start;
+    }
+    .research h3{
+      font-size:28px;
+      margin:0 0 6px;
+      letter-spacing:-.8px;
+    }
+    .venue{
+      color:var(--blue);
+      font-size:12px;
+      font-weight:750;
+      margin-bottom:18px;
+    }
+    .research p{
+      color:var(--muted);
+      font-size:14px;
+      margin:0 0 14px;
+    }
+    .research-points{
+      margin:20px 0 0;
+      padding:0;
+      list-style:none;
+      border-top:1px solid var(--line);
+    }
+    .research-points li{
+      display:grid;
+      grid-template-columns:100px 1fr;
+      gap:16px;
+      padding:14px 0;
+      border-bottom:1px solid var(--line);
+      font-size:13px;
+    }
+    .research-points b{color:var(--ink)}
+    .research-points span{color:var(--muted)}
+    .research-visual{
+      background:var(--pale);
+      border-radius:16px;
+      padding:16px;
+    }
+    .research-visual img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .research-visual small{
+      display:block;
+      margin-top:10px;
+      color:var(--muted);
+      font-size:11px;
+    }
+    .photo-row{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .photo-row figure{
+      margin:0;
+      background:var(--pale);
+      border-radius:12px;
+      overflow:hidden;
+    }
+    .photo-row img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:contain;
+      display:block;
+      background:var(--pale);
+      padding:7px;
+    }
+    .photo-row figcaption{
+      background:#fff;
+      padding:9px 11px;
+      color:var(--muted);
+      font-size:11px;
+      border-top:1px solid var(--line);
+    }
+
+    .pub-list{border-top:1px solid var(--line)}
+    .pub{
+      display:grid;
+      grid-template-columns:90px 1fr auto;
+      gap:24px;
+      padding:22px 0;
+      border-bottom:1px solid var(--line);
+      align-items:start;
+    }
+    .pub-year{
+      color:var(--blue);
+      font-size:12px;
+      font-weight:800;
+    }
+    .pub h3{
+      margin:0 0 5px;
+      font-size:16px;
+      line-height:1.5;
+      letter-spacing:-.2px;
+    }
+    .pub p{
+      margin:2px 0;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .pub-link{
+      color:var(--blue);
+      font-size:12px;
+      font-weight:750;
+      white-space:nowrap;
+    }
+
+    .focus-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+    }
+    .focus{
+      padding-top:16px;
+      border-top:2px solid var(--ink);
+    }
+    .focus span{
+      color:var(--blue);
+      font-size:11px;
+      font-weight:800;
+    }
+    .focus h3{
+      margin:8px 0 8px;
+      font-size:18px;
+    }
+    .focus p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:160px 1fr;
+      gap:30px;
+      align-items:start;
+    }
+    .about-copy{
+      max-width:700px;
+    }
+    .about-copy p{
+      color:var(--muted);
+      font-size:14px;
+      margin:0 0 13px;
+    }
+    .about-meta{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:grid;
+      grid-template-columns:140px 1fr;
+      gap:8px 16px;
+      font-size:13px;
+    }
+    .about-meta b{color:var(--ink)}
+    .about-meta span{color:var(--muted)}
+
+    footer{
+      max-width:var(--max);
+      margin:auto;
+      padding:28px 24px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    @media(max-width:780px){
+      .nav{padding:15px 18px}
+      nav{gap:14px;font-size:12px}
+      nav .extra{display:none}
+      main{padding:0 18px 50px}
+      .hero{grid-template-columns:1fr;gap:28px;padding:54px 0 42px}
+      .profile{width:min(72vw,260px)}
+      .quick{grid-template-columns:1fr}
+      .quick-item,.quick-item + .quick-item{
+        padding:14px 0;
+        border-left:0;
+        border-top:1px solid var(--line);
       }
-      .conference-shot {
-        margin: 0;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        overflow: hidden;
-        background: var(--pale);
-      }
-      .conference-shot .photo-frame {
-        aspect-ratio: 4 / 3;
-        background: var(--pale);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-      }
-      .conference-shot img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        display: block;
-        border-radius: 10px;
-      }
-      .conference-shot figcaption {
-        padding: 11px 14px 13px;
-        color: var(--muted);
-        font-size: 12px;
-        background: white;
-      }
-      .visual {
-        background: #f0f5ff;
-        border: 1px solid #dce7ff;
-        border-radius: 24px;
-        padding: 30px;
-        position: relative;
-      }
-      .visual .small {
-        font-size: 11px;
-        letter-spacing: 2px;
-        color: #526d9b;
-        font-weight: 700;
-      }
-      .signal {
-        padding: 15px 17px;
-        background: white;
-        border: 1px solid #e1e8f4;
-        border-radius: 12px;
-        margin-top: 15px;
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        box-shadow: 0 4px 12px #233c6a05;
-      }
-      .signal b {
-        background: #edf3ff;
-        color: var(--blue);
-        border-radius: 8px;
-        width: 36px;
-        height: 36px;
-        text-align: center;
-        line-height: 36px;
-      }
-      .signal strong {
-        display: block;
-        font-size: 14px;
-      }
-      .signal small {
-        font-size: 12px;
-        color: var(--muted);
-      }
-      .join {
-        text-align: center;
-        color: #7392be;
-        font-size: 21px;
-        line-height: 1.2;
-        margin: 10px;
-      }
-      .answer {
-        background: #2463eb;
-        color: white;
-        border-radius: 12px;
-        padding: 17px;
-        font-weight: 650;
-        font-size: 15px;
-      }
-      .answer small {
-        display: block;
-        color: #e0eaff;
-        font-weight: 400;
-        font-size: 12px;
-        margin-top: 3px;
-      }
-      .strip {
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        padding: 26px 0;
-        gap: 25px;
-      }
-      .strip strong {
-        display: block;
-        font-size: 16px;
-      }
-      .strip span {
-        font-size: 13px;
-        color: var(--muted);
-      }
-      section {
-        padding: 76px 0;
-        border-bottom: 1px solid var(--line);
-      }
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
-        gap: 20px;
-        margin-bottom: 30px;
-      }
-      .section-head h2 {
-        font-size: 32px;
-        letter-spacing: -1px;
-        margin: 0;
-      }
-      .section-head p {
-        font-size: 14px;
-        color: var(--muted);
-        margin: 0;
-      }
-      .project {
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-      }
-      .project-copy {
-        padding: 36px;
-      }
-      .badge {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 700;
-        color: #2458b2;
-        background: #eaf1ff;
-        padding: 5px 11px;
-        border-radius: 6px;
-      }
-      .project h3 {
-        font-size: 34px;
-        letter-spacing: -1px;
-        margin: 15px 0 2px;
-      }
-      .subtitle {
-        font-size: 15px;
-        color: var(--muted);
-        margin-top: 0;
-      }
-      .facts {
-        margin: 24px 0 0;
-      }
-      .facts dt {
-        font-weight: 750;
-        font-size: 13px;
-        margin-top: 17px;
-      }
-      .facts dd {
-        margin: 4px 0 0;
-        font-size: 14px;
-        color: var(--muted);
-      }
-      .project-art {
-        background: var(--pale);
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 20px;
-      }
-      .poster {
-        width: 100%;
-        height: auto;
-        display: block;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        box-shadow: 0 10px 30px #23304a12;
-      }
-      .caption {
-        font-size: 12px;
-        color: var(--muted);
-        margin: 0;
-      }
-      .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        margin-top: 20px;
-      }
-      .tags span {
-        font-size: 11px;
-        background: var(--pale);
-        padding: 4px 9px;
-        border-radius: 5px;
-        color: #526070;
-      }
-      .pub {
-        display: grid;
-        grid-template-columns: 100px 1fr auto;
-        gap: 25px;
-        padding: 27px 0;
-        border-top: 1px solid var(--line);
-      }
-      .pub:first-of-type {
-        border-top: 0;
-      }
-      .year {
-        font-size: 13px;
-        color: var(--blue);
-        font-weight: 750;
-      }
-      .pub h3 {
-        font-size: 18px;
-        line-height: 1.5;
-        margin: 0 0 8px;
-      }
-      .pub p {
-        font-size: 13px;
-        color: var(--muted);
-        margin: 3px 0;
-      }
-      .text-link {
-        font-weight: 650;
-        font-size: 14px;
-        white-space: nowrap;
-      }
-      .skills {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
-      }
-      .skill {
-        border-top: 2px solid var(--ink);
-        padding-top: 20px;
-      }
-      .skill .num {
-        color: var(--blue);
-        font-size: 12px;
-        font-weight: 700;
-      }
-      .skill h3 {
-        font-size: 20px;
-        margin: 12px 0;
-      }
-      .skill p {
-        color: var(--muted);
-        font-size: 14px;
-      }
-      .about {
-        display: grid;
-        grid-template-columns: 1fr 1.4fr;
-        gap: 60px;
-      }
-      .about h2 {
-        font-size: 32px;
-        letter-spacing: -1px;
-        margin: 0;
-      }
-      .about p {
-        font-size: 15px;
-        color: var(--muted);
-        margin-top: 0;
-      }
-      .education {
-        border-left: 2px solid var(--blue);
-        padding-left: 20px;
-        margin-top: 28px;
-      }
-      .education strong {
-        display: block;
-      }
-      .education span {
-        font-size: 14px;
-        color: var(--muted);
-      }
-      footer {
-        max-width: 1120px;
-        margin: auto;
-        padding: 35px 28px;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        font-size: 12px;
-        color: var(--muted);
-      }
-      .skip {
-        position: absolute;
-        left: 10px;
-        top: -80px;
-        background: white;
-        padding: 10px;
-        z-index: 20;
-      }
-      .skip:focus {
-        top: 10px;
-      }
-      @media (max-width: 760px) {
-        .nav {
-          padding: 16px 20px;
-        }
-        nav {
-          gap: 16px;
-          font-size: 12px;
-        }
-        nav .extra {
-          display: none;
-        }
-        main {
-          padding: 0 20px;
-        }
-        .hero {
-          grid-template-columns: 1fr;
-          padding: 55px 0 40px;
-          gap: 30px;
-        }
-        h1 {
-          letter-spacing: -1.8px;
-        }
-        .visual {
-          padding: 22px;
-        }
-        .conference-gallery {
-          grid-template-columns: 1fr;
-          gap: 14px;
-        }
-        .profile-card {
-          width: min(78vw, 300px);
-          justify-self: start;
-        }
-        .strip {
-          grid-template-columns: 1fr;
-          gap: 15px;
-          padding: 22px 0;
-        }
-        .strip strong {
-          font-size: 15px;
-        }
-        .strip span {
-          font-size: 12px;
-        }
-        section {
-          padding: 50px 0;
-        }
-        .section-head {
-          display: block;
-        }
-        .section-head p {
-          margin-top: 8px;
-        }
-        .project {
-          grid-template-columns: 1fr;
-        }
-        .project-copy,
-        .project-art {
-          padding: 25px;
-        }
-        .skills {
-          grid-template-columns: 1fr;
-          gap: 25px;
-        }
-        .pub {
-          grid-template-columns: 1fr;
-          gap: 10px;
-        }
-        .about {
-          grid-template-columns: 1fr;
-          gap: 25px;
-        }
-        footer {
-          flex-direction: column;
-          gap: 5px;
-        }
-        .section-head h2,
-        .about h2 {
-          font-size: 28px;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-      @media print {
-        header,
-        .buttons {
-          display: none;
-        }
-        .hero,
-        section {
-          padding: 25px 0;
-        }
-        .project,
-        .pub {
-          break-inside: avoid;
-        }
-        a {
-          color: #191f28;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <a class="skip" href="#main">본문으로 이동</a>
-    <header>
-      <div class="nav">
-        <a class="brand" href="#">Youngseon Kim<span>.</span></a>
-        <nav aria-label="주요 메뉴">
-          <a href="#work">Research</a><a href="#publications">Publications</a><a href="#about">About</a><a href="/cv/">CV</a
-          ><a class="extra" href="https://github.com/thsu1084">GitHub ↗</a>
-        </nav>
+      .quick-item:first-child{border-top:0}
+      .section-title,.about{grid-template-columns:1fr;gap:8px}
+      section{padding:50px 0}
+      .research{grid-template-columns:1fr}
+      .photo-row{grid-template-columns:1fr}
+      .pub{grid-template-columns:1fr;gap:7px}
+      .focus-grid{grid-template-columns:1fr;gap:22px}
+      .about-meta{grid-template-columns:1fr;gap:2px}
+      footer{padding:24px 18px;flex-direction:column;gap:4px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="/">Youngseon Kim<span>.</span></a>
+      <nav aria-label="주요 메뉴">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
+        <a href="/cv/">CV</a>
+        <a class="extra" href="https://github.com/thsu1084">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-bottom:0">
+      <div>
+        <p class="eyebrow">AI Research & Engineering</p>
+        <h1>시각 정보와 지식을<br />연결하는 <em>AI를 연구합니다.</em></h1>
+        <p class="intro">
+          멀티모달 모델이 영상 속 단서를 이해하고, 필요한 외부 지식을 찾아
+          더 신뢰할 수 있는 답변으로 연결하는 방법을 연구합니다.
+          특히 AI for Sports와 실제 영상 이해 문제에 관심이 있습니다.
+        </p>
+        <p class="identity">
+          <strong>김영선 · Youngseon Kim</strong>
+          중앙대학교 컴퓨터공학 석사과정
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#research">Research</a>
+          <a class="btn" href="/cv/">CV</a>
+          <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
+        </div>
       </div>
-    </header>
-    <main id="main">
-      <div class="hero">
+
+      <div class="profile">
+        <img src="/assets/img/prof_pic.jpg" alt="Youngseon Kim profile photo" />
+      </div>
+    </section>
+
+    <div class="quick">
+      <div class="quick-item">
+        <strong>CVPR 2026 · CVSports</strong>
+        <span>SetPieceRAG · First author · Spotlight</span>
+      </div>
+      <div class="quick-item">
+        <strong>ACCV 2026</strong>
+        <span>SoccerNet Challenges Results · Co-author</span>
+      </div>
+      <div class="quick-item">
+        <strong>AI for Sports × Multimodal AI</strong>
+        <span>RAG · VLMs · Video understanding</span>
+      </div>
+    </div>
+
+    <section id="research">
+      <div class="section-title">
+        <div class="section-index">01 / Research</div>
         <div>
-          <p class="eyebrow">AI Research & Engineering</p>
-          <h1>시각 정보와 지식을<br />연결하는 <em>AI를 연구합니다.</em></h1>
-          <p class="intro">
-            영상 속 단서를 이해하고, 필요한 지식을 찾아 답변의 근거로 연결합니다. 멀티모달 모델과 검색 증강 생성으로 실제 영상 이해 문제를 풀고
-            있습니다.
+          <h2>Selected Research</h2>
+          <p>대표 프로젝트를 문제와 접근 중심으로 간결하게 정리했습니다.</p>
+        </div>
+      </div>
+
+      <div class="research">
+        <div>
+          <div class="venue">CVSports @ CVPR 2026 · Spotlight</div>
+          <h3>SetPieceRAG</h3>
+          <p><strong>Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</strong></p>
+          <p>
+            축구 방송 영상만으로 답하기 어려운 선수·팀·역사적 맥락의 질문에 대해
+            시각 단서와 외부 축구 지식을 연결하는 멀티모달 RAG 시스템입니다.
           </p>
-          <p class="identity"><strong>김영선 · Youngseon Kim</strong><br />중앙대학교 컴퓨터공학 석사과정</p>
-          <div class="buttons">
-            <a class="button" href="#work">대표 연구 살펴보기 ↓</a><a class="button secondary" href="/cv/">CV</a><a class="button secondary" href="https://github.com/thsu1084">GitHub ↗</a>
+
+          <ul class="research-points">
+            <li><b>Problem</b><span>영상 내부 정보만으로는 부족한 knowledge-intensive soccer VQA</span></li>
+            <li><b>Approach</b><span>CLIP 기반 grounding + SoccerWiki / web retrieval + multimodal generation</span></li>
+            <li><b>Methods</b><span>Task-adaptive routing, LoRA adaptation, preprocessing, fallback strategies</span></li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn primary" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
+            <a class="btn" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png">Poster ↗</a>
           </div>
         </div>
-        <div class="profile-card">
-          <img
-            class="profile-photo"
-            src="/assets/img/prof_pic.jpg"
-            alt="Youngseon Kim profile photo"
-          />
+
+        <div>
+          <div class="research-visual">
+            <img src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG CVPR 2026 poster" />
+            <small>SetPieceRAG · CVSports @ CVPR 2026</small>
+          </div>
+
+          <div class="photo-row">
+            <figure>
+              <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports" />
+              <figcaption>Presentation · Denver</figcaption>
+            </figure>
+            <figure>
+              <img src="/assets/img/cvpr2026-group.jpg" alt="CVSports workshop group photo at CVPR 2026" />
+              <figcaption>CVSports @ CVPR 2026</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
-      <div class="strip">
-        <div><strong>CVPR 2026 · CVSports</strong><span>SetPieceRAG · First author · Spotlight</span></div>
-        <div><strong>ACCV 2026</strong><span>SoccerNet Challenges Results · Co-author</span></div>
-        <div><strong>Multimodal AI × RAG</strong><span>Vision-language models · Video understanding</span></div>
+    </section>
+
+    <section id="publications">
+      <div class="section-title">
+        <div class="section-index">02 / Publications</div>
+        <div>
+          <h2>Publications</h2>
+          <p>현재 공개된 주요 연구 결과입니다.</p>
+        </div>
       </div>
-      <section id="work">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">01 / SELECTED WORK</p>
-            <h2>대표 연구</h2>
-          </div>
-          <p>문제에서 출발해, 필요한 근거를 연결합니다.</p>
-        </div>
-        <article class="project">
-          <div class="project-copy">
-            <span class="badge">CVPR 2026 Workshop · Spotlight</span>
-            <h3>SetPieceRAG</h3>
-            <p class="subtitle">Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</p>
-            <dl class="facts">
-              <dt>문제</dt>
-              <dd>축구 영상만으로는 답하기 어려운 선수·팀·역사적 맥락에 관한 질문은 외부 지식이 필요합니다.</dd>
-              <dt>접근</dt>
-              <dd>CLIP 기반 시각 단서와 SoccerWiki 및 웹 검색을 연결하고, 검색한 근거를 멀티모달 모델의 응답에 활용합니다.</dd>
-              <dt>연구 범위</dt>
-              <dd>질문 유형에 맞춘 검색 증강, LoRA 기반 적응, 영상 전처리 등 다양한 접근을 SoccerNet VQA에서 평가했습니다.</dd>
-              <dt>저자</dt>
-              <dd><strong>Youngseon Kim</strong>, Jongmin Lee · 제1저자</dd>
-            </dl>
-            <div class="tags"><span>Multimodal RAG</span><span>CLIP</span><span>LoRA</span><span>Video QA</span></div>
-            <div class="buttons">
-              <a
-                class="button"
-                href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html"
-                >논문 읽기 ↗</a
-              ><a class="button secondary" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png"
-                >포스터 보기 ↗</a
-              >
-            </div>
-          </div>
-          <div class="project-art">
-            <a
-              href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png"
-              aria-label="SetPieceRAG 연구 포스터 원본 보기"
-              ><img
-                class="poster"
-                src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png"
-                alt="SetPieceRAG의 연구 방법과 평가 결과를 정리한 CVSports 학회 포스터"
-                loading="lazy"
-                width="1600"
-                height="900"
-            /></a>
-            <p class="caption">CVSports @ CVPR 2026 · Research poster<br />포스터를 선택하면 원본을 볼 수 있습니다.</p>
-          </div>
-        </article>
-        <div class="conference-gallery" aria-label="CVPR 2026 CVSports conference photos">
-          <figure class="conference-shot">
-            <div class="photo-frame">
-              <img src="/assets/img/cvpr2026-presentation.jpg" alt="SetPieceRAG presentation at CVPR 2026 CVSports in Denver" loading="lazy" />
-            </div>
-            <figcaption>Presenting SetPieceRAG · CVSports @ CVPR 2026 · Denver</figcaption>
-          </figure>
-          <figure class="conference-shot">
-            <div class="photo-frame">
-              <img src="/assets/img/cvpr2026-group.jpg" alt="CVPR 2026 CVSports workshop group photo" loading="lazy" />
-            </div>
-            <figcaption>CVSports community · CVPR 2026</figcaption>
-          </figure>
-        </div>
-      </section>
-      <section id="publications">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">02 / PUBLICATIONS</p>
-            <h2>논문 및 학술 발표</h2>
-          </div>
-          <p>공개된 연구와 확인 가능한 자료</p>
-        </div>
+
+      <div class="pub-list">
         <article class="pub">
-          <div class="year">2026<br />CVPRW</div>
+          <div class="pub-year">2026 · CVPRW</div>
           <div>
             <h3>SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</h3>
             <p><strong>Youngseon Kim</strong>, Jongmin Lee</p>
-            <p>CVPR Workshop on Computer Vision in Sports (CVSports) · Spotlight</p>
+            <p>CVSports Workshop @ CVPR 2026 · Spotlight</p>
           </div>
-          <a
-            class="text-link"
-            href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html"
-            >Paper ↗</a
-          >
+          <a class="pub-link" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
         </article>
+
         <article class="pub">
-          <div class="year">2026<br />ACCV</div>
+          <div class="pub-year">2026 · ACCV</div>
           <div>
             <h3>SoccerNet 2026 Challenges Results</h3>
             <p>Anthony Cioppa et al., including <strong>Youngseon Kim</strong> and Jongmin Lee</p>
             <p>Asian Conference on Computer Vision · Co-author</p>
           </div>
-          <a class="text-link" href="https://arxiv.org/abs/2607.07320">arXiv ↗</a>
+          <a class="pub-link" href="https://arxiv.org/abs/2607.07320">arXiv ↗</a>
         </article>
-      </section>
-      <section>
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">03 / RESEARCH AREAS</p>
-            <h2>집중하는 기술과 문제</h2>
-          </div>
-        </div>
-        <div class="skills">
-          <article class="skill">
-            <span class="num">01</span>
-            <h3>멀티모달 이해</h3>
-            <p>이미지·영상과 언어를 함께 다루며, 실제 방송 영상의 복잡한 시각적 맥락을 이해하는 방법을 연구합니다.</p>
-            <div class="tags"><span>Computer Vision</span><span>VLMs</span><span>Video QA</span></div>
-          </article>
-          <article class="skill">
-            <span class="num">02</span>
-            <h3>지식 검색과 활용</h3>
-            <p>모델 내부 지식만으로 부족한 질문을 분석하고, 도메인 지식과 검색 결과를 답변에 연결합니다.</p>
-            <div class="tags"><span>RAG</span><span>CLIP</span><span>Domain Knowledge</span></div>
-          </article>
-          <article class="skill">
-            <span class="num">03</span>
-            <h3>태스크별 모델 적응</h3>
-            <p>질문과 입력 특성에 따라 파인튜닝·전처리·추론 방식을 선택하고, 벤치마크를 통해 효과를 비교합니다.</p>
-            <div class="tags"><span>LoRA</span><span>Preprocessing</span><span>Benchmarking</span></div>
-          </article>
-        </div>
-      </section>
-      <section id="about" class="about">
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="section-index">03 / Focus</div>
         <div>
-          <p class="eyebrow">04 / ABOUT</p>
-          <h2>Youngseon Kim</h2>
-          <p>AI Research · Computer Engineering</p>
+          <h2>Research Focus</h2>
+          <p>하나의 큰 주제 아래에서 연결되는 연구 관심사입니다.</p>
         </div>
-        <div>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus">
+          <span>01</span>
+          <h3>Multimodal Understanding</h3>
+          <p>이미지·영상과 언어를 함께 다루며 실제 방송 환경의 복잡한 시각적 맥락을 이해합니다.</p>
+        </article>
+        <article class="focus">
+          <span>02</span>
+          <h3>Knowledge Grounding & RAG</h3>
+          <p>모델 내부 지식만으로 부족한 질문에 외부 지식을 검색하고 답변 근거로 연결합니다.</p>
+        </article>
+        <article class="focus">
+          <span>03</span>
+          <h3>AI for Sports</h3>
+          <p>축구 영상 이해, video QA, visual retrieval 등 스포츠 도메인의 실제 문제에 멀티모달 AI를 적용합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="section-index">04 / About</div>
+        <div class="about-copy">
+          <h2 style="margin:0 0 16px;font-size:30px;letter-spacing:-1px">Youngseon Kim</h2>
           <p>
-            중앙대학교 컴퓨터공학 석사과정에서 멀티모달 학습, 컴퓨터 비전, 시각-언어 모델을 연구하고 있습니다. 특히 영상의 시각적 정보에 외부 지식을
-            결합하는 연구에 관심이 있습니다.
+            중앙대학교 컴퓨터공학 석사과정에서 멀티모달 AI, 컴퓨터 비전,
+            vision-language models, retrieval-augmented generation을 연구하고 있습니다.
           </p>
-          <p>연구에서 다룬 검색·모델 적응·평가 경험을 바탕으로, 실제 문제에 도움이 되는 AI 시스템을 만드는 일을 지향합니다.</p>
-          <div class="education">
-            <strong>Chung-Ang University</strong><span>M.S. Student · Computer Engineering<br />Advisor: Prof. Jongmin Lee</span>
+          <p>
+            특히 스포츠 방송 영상처럼 시각적 단서와 외부 지식이 함께 필요한 문제에서,
+            검색·모델 적응·추론을 연결한 실용적인 AI 시스템을 만드는 데 관심이 있습니다.
+          </p>
+
+          <div class="about-meta">
+            <b>Affiliation</b><span>Chung-Ang University</span>
+            <b>Research</b><span>Multimodal AI · AI for Sports · RAG · Video Understanding</span>
           </div>
-          <div class="buttons">
-            <a class="button secondary" href="https://github.com/thsu1084">GitHub 프로필 ↗</a
-            ><a class="text-link" href="https://bluedream1121.github.io/spatial-intelligence-lab/">Spatial Intelligence Lab ↗</a>
+
+          <div class="actions">
+            <a class="btn" href="/cv/">View CV</a>
+            <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
+            <a class="btn" href="https://bluedream1121.github.io/spatial-intelligence-lab/">Lab ↗</a>
           </div>
         </div>
-      </section>
-    </main>
-    <footer><span>© 2026 Youngseon Kim</span><span>Multimodal AI · Knowledge Grounding · Video Understanding</span></footer>
-  </body>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Youngseon Kim</span>
+    <span>Multimodal AI · AI for Sports · Knowledge Grounding</span>
+  </footer>
+</body>
 </html>
