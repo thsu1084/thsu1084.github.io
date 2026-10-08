@@ -10,7 +10,7 @@ title: Youngseon Kim | CV
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Youngseon Kim · CV</title>
   <meta name="description" content="Curriculum Vitae of Youngseon Kim, M.S. student at Chung-Ang University working on Multimodal AI, AI for Sports, RAG, and Vision-Language Understanding." />
-  <link rel="stylesheet" href="/assets/css/site.css?v=20261008-2" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261008-3" />
 </head>
 <body>
   {% include site-header.html %}
@@ -24,7 +24,6 @@ title: Youngseon Kim | CV
         <div class="actions">
           <a class="btn primary" href="/">Portfolio</a>
           <a class="btn" href="javascript:window.print()">Print / Save as PDF</a>
-          <a class="btn" href="https://github.com/thsu1084">GitHub ↗</a>
         </div>
       </div>
       <div class="cv-contact">
