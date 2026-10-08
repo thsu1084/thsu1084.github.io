@@ -9,21 +9,10 @@ permalink: /
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Youngseon Kim · AI Research & Engineering</title>
-  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261008-2" />
 </head>
 <body>
-<header class="site-header">
-  <div class="site-nav">
-    <a class="site-brand" href="/">Youngseon Kim<span>.</span></a>
-    <nav class="site-links">
-      <a href="#paper">Selected Paper</a>
-      <a href="#publications">Publications</a>
-      <a href="#about">About</a>
-      <a href="/cv/">CV</a>
-      <a class="extra" href="https://github.com/thsu1084">GitHub ↗</a>
-    </nav>
-  </div>
-</header>
+{% include site-header.html %}
 
 <main class="page">
   <section class="hero">
@@ -113,6 +102,6 @@ permalink: /
   </section>
 </main>
 
-<footer class="site-footer"><span>© 2026 Youngseon Kim</span><span>Multimodal AI · AI for Sports · Knowledge Grounding</span></footer>
+{% include site-footer.html %}
 </body>
 </html>
