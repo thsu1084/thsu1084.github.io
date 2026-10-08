@@ -17,7 +17,7 @@ title: Youngseon Kim | CV
 
 <main class="page">
 
-  <section class="hero">
+  <section class="hero" style="grid-template-columns:1fr;min-height:auto;">
     <div>
       <p class="kicker">Curriculum Vitae</p>
       <h1>Youngseon Kim</h1>
@@ -31,11 +31,7 @@ title: Youngseon Kim | CV
         <a href="javascript:window.print()">Print / Save as PDF</a>
       </div>
     </div>
-
-    <div class="profile">
-      <img src="/assets/img/prof_pic.jpg" alt="Youngseon Kim profile photo" />
-    </div>
-  </section>
+</section>
 
   <section class="section">
     <h2 class="section-heading">Research Interests</h2>
