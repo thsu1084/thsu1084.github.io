@@ -10,13 +10,13 @@ title: SetPieceRAG
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SetPieceRAG · Youngseon Kim</title>
   <meta name="description" content="SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models." />
-  <link rel="stylesheet" href="/assets/css/site.css?v=20261008-3" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261009-1" />
   <style>
-    .project-page{max-width:920px;margin:0 auto;padding:76px 24px 80px}
-    .project-hero{text-align:center;padding-bottom:44px}
+    .project-page{max-width:960px;margin:0 auto;padding:76px 24px 86px}
+    .project-hero{text-align:center;padding-bottom:48px}
     .project-kicker{margin:0 0 14px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}
-    .project-title{margin:0 auto;max-width:850px;font-size:clamp(34px,5vw,54px);line-height:1.12;letter-spacing:-2px;font-weight:760}
-    .project-subtitle{margin:18px auto 0;max-width:820px;color:#3e4652;font-size:18px;line-height:1.55}
+    .project-title{margin:0 auto;max-width:880px;font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-2.2px;font-weight:760}
+    .project-subtitle{margin:18px auto 0;max-width:840px;color:#3e4652;font-size:18px;line-height:1.55}
     .project-authors{margin-top:20px;font-size:15px}
     .project-authors strong{font-weight:720}
     .project-affil{margin-top:4px;color:var(--muted);font-size:13px}
@@ -24,26 +24,39 @@ title: SetPieceRAG
     .project-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:650;background:#fff}
     .project-link.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
     .project-link:hover{border-color:#aeb5bf}
-    .project-teaser{margin:10px 0 54px}
+    .project-teaser{margin:4px 0 56px}
     .project-teaser img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:14px;background:#fff}
-    .project-caption{margin:10px 6px 0;color:var(--muted);font-size:12px;line-height:1.6;text-align:center}
-    .project-section{padding:48px 0;border-top:1px solid var(--line)}
-    .project-section h2{margin:0 0 20px;font-size:24px;letter-spacing:-.6px}
-    .project-section p{margin:0;color:#4b5563;font-size:15px;line-height:1.8}
+    .project-caption{margin:11px 8px 0;color:var(--muted);font-size:12px;line-height:1.65;text-align:center}
+    .project-section{padding:50px 0;border-top:1px solid var(--line)}
+    .project-section h2{margin:0 0 20px;font-size:25px;letter-spacing:-.7px}
+    .project-section h3{margin:28px 0 10px;font-size:18px;letter-spacing:-.3px}
+    .project-section p{margin:0;color:#4b5563;font-size:15px;line-height:1.85}
+    .project-section p + p{margin-top:14px}
     .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
     .project-card{padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff}
     .project-card .num{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1px}
     .project-card h3{margin:7px 0 7px;font-size:16px}
-    .project-card p{font-size:13px;line-height:1.65}
-    .metric-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}
+    .project-card p{font-size:13px;line-height:1.68}
+    .project-table-wrap{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:12px}
+    .project-table{width:100%;border-collapse:collapse;min-width:700px;background:#fff}
+    .project-table th,.project-table td{padding:13px 15px;border-bottom:1px solid var(--line);font-size:13px;text-align:left;vertical-align:top}
+    .project-table th{background:#f7f8fa;color:#39414d;font-weight:700}
+    .project-table tr:last-child td{border-bottom:0}
+    .gain{color:var(--accent);font-weight:700}
+    .project-note{margin-top:10px;color:var(--muted);font-size:12px;line-height:1.6}
+    .metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
     .metric{padding:18px 12px;border-top:2px solid var(--ink);text-align:left}
     .metric strong{display:block;font-size:22px;letter-spacing:-.5px}
     .metric span{display:block;margin-top:5px;color:var(--muted);font-size:11px}
+    .qual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .qual{padding:18px;border:1px solid var(--line);border-radius:12px}
+    .qual b{display:block;margin-bottom:7px;font-size:13px}
+    .qual p{font-size:12px;line-height:1.65}
     .bibtex{margin-top:18px;padding:20px;border-radius:10px;background:#f6f7f9;overflow:auto;font:12px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
     @media(max-width:760px){
       .project-page{padding:52px 18px 60px}
       .project-subtitle{font-size:16px}
-      .project-grid,.metric-grid{grid-template-columns:1fr}
+      .project-grid,.metric-grid,.qual-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -60,21 +73,43 @@ title: SetPieceRAG
     <div class="project-links">
       <a class="project-link primary" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
       <a class="project-link" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png">Poster ↗</a>
-      <a class="project-link" href="/">Portfolio</a>
     </div>
   </section>
 
   <figure class="project-teaser">
-    <img src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG overview poster" />
-    <figcaption class="project-caption">SetPieceRAG grounds visual evidence, retrieves soccer-domain knowledge, and routes difficult cases to stronger multimodal reasoning.</figcaption>
+    <img src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG CVPR 2026 poster" />
+    <figcaption class="project-caption">
+      SetPieceRAG combines visual grounding, domain-specific retrieval, task-specific adaptation,
+      and fallback reasoning for knowledge-intensive soccer VQA.
+    </figcaption>
   </figure>
 
   <section class="project-section">
-    <h2>Overview</h2>
+    <h2>Abstract</h2>
     <p>
-      Soccer video question answering often requires information that is not visible in the broadcast frame itself:
-      player identity, career history, team context, and historical statistics. SetPieceRAG combines visual grounding
-      with domain-specific retrieval so that a model can connect what it sees to the external knowledge needed to answer.
+      Visual Question Answering in soccer goes beyond recognizing what is directly visible in a frame.
+      Many questions require player identity, career history, team context, historical statistics, and other
+      long-tail knowledge that is absent from the image itself and often underrepresented in model parameters.
+      SetPieceRAG addresses this gap with a domain-specific Retrieval-Augmented Generation framework designed
+      for soccer VQA.
+    </p>
+    <p>
+      Beyond the core retrieval pipeline, the framework introduces task-specific adaptations including
+      LLM ensembling, LoRA-based domain adaptation, super-resolution preprocessing, and object-centric analysis.
+      For knowledge-intensive questions, CLIP-based visual grounding is connected to external knowledge from
+      SoccerWiki and web-enabled multimodal models. By retrieving and injecting the evidence required by each
+      question type, SetPieceRAG substantially improves answer accuracy on the SoccerNet VQA benchmark.
+    </p>
+  </section>
+
+  <section class="project-section">
+    <h2>Motivation</h2>
+    <p>
+      A broadcast frame may reveal a face, kit, number, or match context, but it rarely contains the factual
+      answer to questions such as a player's youth clubs, previous transfers, historical appearances, or career
+      statistics. This creates a mismatch between visual evidence and the knowledge required to answer.
+      SetPieceRAG treats soccer VQA as a grounding-and-retrieval problem rather than forcing a single model to
+      memorize the entire football world.
     </p>
   </section>
 
@@ -84,49 +119,125 @@ title: SetPieceRAG
       <article class="project-card">
         <div class="num">01</div>
         <h3>Visual Grounding</h3>
-        <p>CLIP-based retrieval identifies the relevant player or visual entity from the query image.</p>
+        <p>CLIP-based retrieval maps the visual query to the relevant player or entity before factual retrieval.</p>
       </article>
       <article class="project-card">
         <div class="num">02</div>
         <h3>Domain Retrieval</h3>
-        <p>SoccerWiki and web knowledge provide facts that cannot be inferred reliably from pixels alone.</p>
+        <p>SoccerWiki and web knowledge supply non-parametric, long-tail facts that are not visible in the broadcast.</p>
       </article>
       <article class="project-card">
         <div class="num">03</div>
         <h3>Task-Adaptive Routing</h3>
-        <p>Lightweight generation handles grounded cases while fallback routing escalates harder questions when needed.</p>
+        <p>Different question types trigger RAG, LoRA, super-resolution, commentary reasoning, or multimodal fallback.</p>
+      </article>
+    </div>
+
+    <h3>Task-specific adaptations</h3>
+    <div class="project-table-wrap">
+      <table class="project-table">
+        <thead>
+          <tr><th>Question type</th><th>Adaptation</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1 / Q4</td><td>SoccerWiki + web RAG</td><td>Inject player- and soccer-specific external knowledge.</td></tr>
+          <tr><td>Q3</td><td>LoRA adaptation</td><td>Improve domain-sensitive generation without full model retraining.</td></tr>
+          <tr><td>Q5</td><td>Super-resolution</td><td>Recover fine visual evidence from low-resolution broadcast crops.</td></tr>
+          <tr><td>Q10</td><td>Commentary fallback → video</td><td>Use textual context first and escalate to visual reasoning when necessary.</td></tr>
+          <tr><td>Q11</td><td>Two-stage commentary routing</td><td>Route questions through a lightweight staged reasoning pipeline.</td></tr>
+          <tr><td>Q12</td><td>Structured parsing</td><td>Stabilize answer extraction and reduce formatting failures.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Results</h2>
+    <div class="metric-grid">
+      <div class="metric"><strong>+92 pp</strong><span>Q4 · 5 → 97</span></div>
+      <div class="metric"><strong>+30 pp</strong><span>Q1 · 66 → 96</span></div>
+      <div class="metric"><strong>+22 pp</strong><span>Q3 · 56 → 78</span></div>
+      <div class="metric"><strong>+20 pp</strong><span>Q10 · 62 → 82</span></div>
+    </div>
+
+    <div class="project-table-wrap">
+      <table class="project-table">
+        <thead>
+          <tr><th>Task</th><th>Baseline</th><th>SetPieceRAG / Adapted</th><th>Gain</th><th>Main component</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1</td><td>66</td><td>96</td><td class="gain">+30 pp</td><td>Domain RAG</td></tr>
+          <tr><td>Q4</td><td>5</td><td>97</td><td class="gain">+92 pp</td><td>RAG + fallback</td></tr>
+          <tr><td>Q3</td><td>56</td><td>78</td><td class="gain">+22 pp</td><td>LoRA</td></tr>
+          <tr><td>Q5</td><td>78</td><td>84</td><td class="gain">+6 pp</td><td>Super-resolution</td></tr>
+          <tr><td>Q10</td><td>62</td><td>82</td><td class="gain">+20 pp</td><td>Commentary fallback</td></tr>
+          <tr><td>Q12</td><td>76</td><td>80</td><td class="gain">+4 pp</td><td>Structured parsing</td></tr>
+          <tr><td>Q11</td><td>—</td><td>80</td><td>—</td><td>Two-stage routing</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="project-note">Scores are reported as task accuracy (%) on the corresponding evaluation subsets. Q4 uses fallback in difficult cases; the measured fallback rate was 86%.</div>
+  </section>
+
+  <section class="project-section">
+    <h2>Ablation & Analysis</h2>
+    <p>
+      Retrieval is most valuable when the visual signal identifies the entity but cannot answer the factual question.
+      The test analysis contains many such cases: image-only reasoning often recognizes a kit or player context yet
+      explicitly reports that career history or statistics are unavailable from pixels. Adding retrieved SoccerWiki
+      evidence frequently turns these unanswerable cases into grounded answers.
+    </p>
+
+    <div class="project-table-wrap">
+      <table class="project-table">
+        <thead>
+          <tr><th>Setting</th><th>Available evidence</th><th>Typical behavior</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>No retrieval</td><td>Image only</td><td>Often recognizes visual context but cannot infer historical facts.</td></tr>
+          <tr><td>Vector DB</td><td>Visual grounding + retrieved entry</td><td>Improves factual coverage when entity retrieval is correct.</td></tr>
+          <tr><td>Full RAG</td><td>Grounding + SoccerWiki + routing / fallback</td><td>Best handles knowledge-intensive and long-tail questions.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h2>Qualitative Examples</h2>
+    <div class="qual-grid">
+      <article class="qual">
+        <b>Youth clubs</b>
+        <p>An image-only model cannot recover a player's youth history, while retrieved player information provides the exact sequence of clubs.</p>
+      </article>
+      <article class="qual">
+        <b>Career statistics</b>
+        <p>Questions about appearances or goals require factual records that are not encoded in the visible frame.</p>
+      </article>
+      <article class="qual">
+        <b>Transfers & dates</b>
+        <p>Grounding the player first lets the system retrieve the relevant career timeline and answer date-specific questions.</p>
       </article>
     </div>
   </section>
 
   <section class="project-section">
-    <h2>Key Results</h2>
-    <div class="metric-grid">
-      <div class="metric"><strong>66→96</strong><span>Q1</span></div>
-      <div class="metric"><strong>5→97</strong><span>Q4</span></div>
-      <div class="metric"><strong>62→82</strong><span>Q10</span></div>
-      <div class="metric"><strong>56→78</strong><span>Q3 · LoRA</span></div>
-      <div class="metric"><strong>78→84</strong><span>Q5 · SR</span></div>
-    </div>
-  </section>
-
-  <section class="project-section">
-    <h2>Why Retrieval Matters</h2>
+    <h2>Efficiency</h2>
     <p>
-      The test analyses show the central failure mode clearly: an image-only model can recognize visual cues but often
-      cannot answer questions about a player's youth clubs, career statistics, transfer history, or historical appearances.
-      Retrieved domain knowledge supplies the missing evidence, while routing prevents every query from paying the cost of
-      the strongest model.
+      The system avoids sending every query through the most expensive reasoning path. Task-specific routing and
+      fallback allow lightweight components to handle easy or well-grounded cases, while harder questions are
+      escalated selectively. The measured average end-to-end latency is 16.93 seconds in the reported pipeline.
     </p>
   </section>
 
   <section class="project-section">
     <h2>BibTeX</h2>
-    <div class="bibtex">@inproceedings{kim2026setpiecerag,
-  title={SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models},
-  author={Kim, Youngseon and Lee, Jongmin},
-  booktitle={CVPR Workshop on Computer Vision in Sports (CVSports)},
-  year={2026}
+    <div class="bibtex">@InProceedings{Kim_2026_CVPR,
+  author    = {Kim, Youngseon and Lee, Jongmin},
+  title     = {SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month     = {June},
+  year      = {2026},
+  pages     = {10009--10018}
 }</div>
   </section>
 </main>
