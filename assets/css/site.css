@@ -420,3 +420,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .paper-title a:active{
   text-decoration:underline;
 }
+
+.paper-title-link{
+  text-decoration:none !important;
+  text-decoration-thickness:1.5px !important;
+  text-underline-offset:4px !important;
+}
+.paper-title-link:hover,
+.paper-title-link:focus-visible,
+.paper-title-link:active{
+  text-decoration-line:underline !important;
+}
