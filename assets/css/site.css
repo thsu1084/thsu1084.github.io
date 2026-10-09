@@ -408,3 +408,15 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
   .cv-hero{padding:18px 0 22px}
   .cv-section{padding:17px 0;break-inside:avoid}
 }
+
+/* Clickable paper titles */
+.paper-title a{
+  text-decoration:none;
+  text-decoration-thickness:1.5px;
+  text-underline-offset:4px;
+}
+.paper-title a:hover,
+.paper-title a:focus-visible,
+.paper-title a:active{
+  text-decoration:underline;
+}
