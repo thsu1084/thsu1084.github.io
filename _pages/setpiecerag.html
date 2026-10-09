@@ -41,7 +41,11 @@ title: SetPieceRAG
     .project-table th,.project-table td{padding:13px 15px;border-bottom:1px solid var(--line);font-size:13px;text-align:left;vertical-align:top}
     .project-table th{background:#f7f8fa;color:#39414d;font-weight:700}
     .project-table tr:last-child td{border-bottom:0}
-    .bibtex{margin-top:18px;padding:20px;border-radius:10px;background:#f6f7f9;overflow:auto;font:12px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
+    .citation-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:14px}
+    .citation-head h2{margin:0}
+    .copy-cite{border:1px solid var(--line);border-radius:8px;background:#fff;padding:8px 12px;color:#555d68;font-size:12px;font-weight:650;cursor:pointer}
+    .copy-cite:hover{color:var(--ink);border-color:#bfc5ce}
+    .bibtex{margin:0;padding:20px 22px;border:1px solid var(--line);border-radius:10px;background:#f6f7f9;font:12px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;overflow:visible;overflow-wrap:anywhere;word-break:break-word}
     @media(max-width:760px){
       .project-page{padding:52px 18px 60px}
       .project-subtitle{font-size:16px}
@@ -185,18 +189,31 @@ title: SetPieceRAG
   </section>
 
   <section class="project-section">
-    <h2>BibTeX</h2>
-    <div class="bibtex">@InProceedings{Kim_2026_CVPR,
+    <div class="citation-head">
+      <h2>Citation</h2>
+      <button class="copy-cite" type="button" onclick="copyBibtex(this)">Copy BibTeX</button>
+    </div>
+    <pre class="bibtex" id="setpiecerag-bibtex">@InProceedings{Kim_2026_CVPR,
   author    = {Kim, Youngseon and Lee, Jongmin},
   title     = {SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
   month     = {June},
   year      = {2026},
   pages     = {10009--10018}
-}</div>
+}</pre>
   </section>
 </main>
 
 {% include site-footer.html %}
+<script>
+  function copyBibtex(button){
+    const text=document.getElementById('setpiecerag-bibtex').innerText;
+    navigator.clipboard.writeText(text).then(function(){
+      const original=button.textContent;
+      button.textContent='Copied!';
+      setTimeout(function(){button.textContent=original;},1400);
+    });
+  }
+</script>
 </body>
 </html>
