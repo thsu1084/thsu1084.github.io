@@ -65,13 +65,13 @@ title: SetPieceRAG
     <div class="project-affil">Chung-Ang University</div>
     <div class="project-links">
       <a class="project-link primary" href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html">Paper ↗</a>
-      <a class="project-link" href="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png">Poster ↗</a>
+      <a class="project-link" id="setpiecerag-poster-link" href="#poster">Poster ↗</a>
       <span class="project-link" style="color:#8a919b;background:#f7f8fa;cursor:default;user-select:none;">Code · Coming Soon</span>
     </div>
   </section>
 
-  <figure class="project-teaser">
-    <img src="https://bluedream1121.github.io/spatial-intelligence-lab/images/publications/cvprw26-poster.png" alt="SetPieceRAG CVPR 2026 poster" />
+  <figure class="project-teaser" id="poster">
+    <img id="setpiecerag-poster" alt="SetPieceRAG CVPR 2026 poster" />
     <figcaption class="project-caption">
       SetPieceRAG is a domain-specific retrieval-augmented framework for soccer VQA that combines external knowledge retrieval with task-specific adaptation.
     </figcaption>
@@ -215,5 +215,27 @@ title: SetPieceRAG
     });
   }
 </script>
+
+<script>
+  (function () {
+    const parts = Array.from({ length: 7 }, (_, i) =>
+      fetch(`/assets/img/setpiecerag-poster-parts/${i}.txt`).then((response) => {
+        if (!response.ok) throw new Error(`Failed to load poster part ${i}`);
+        return response.text();
+      })
+    );
+
+    Promise.all(parts)
+      .then((chunks) => {
+        const src = "data:image/webp;base64," + chunks.join("");
+        const image = document.getElementById("setpiecerag-poster");
+        const link = document.getElementById("setpiecerag-poster-link");
+        if (image) image.src = src;
+        if (link) link.href = src;
+      })
+      .catch((error) => console.error("Unable to load SetPieceRAG poster:", error));
+  })();
+</script>
+
 </body>
 </html>
