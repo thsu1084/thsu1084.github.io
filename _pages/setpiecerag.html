@@ -4,199 +4,579 @@ permalink: /setpiecerag/
 title: SetPieceRAG
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>SetPieceRAG · Youngseon Kim</title>
-  <meta name="description" content="SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models." />
+
+  <meta
+    name="description"
+    content="SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models."
+  />
+
   <link rel="stylesheet" href="/assets/css/site.css?v=20261009-2" />
+
   <style>
-    .project-page{max-width:960px;margin:0 auto;padding:76px 24px 86px}
-    .project-hero{text-align:center;padding-bottom:48px}
-    .project-kicker{margin:0 0 14px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}
-    .project-title{margin:0 auto;max-width:880px;font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-2.2px;font-weight:760}
-    .project-subtitle{margin:18px auto 0;max-width:840px;color:#3e4652;font-size:18px;line-height:1.55}
-    .project-authors{margin-top:20px;font-size:15px}
-    .project-authors strong{font-weight:720}
-    .project-affil{margin-top:4px;color:var(--muted);font-size:13px}
-    .project-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:24px}
-    .project-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:650;background:#fff}
-    .project-link.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
-    .project-teaser{margin:4px 0 56px}
-    .project-teaser img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:14px;background:#fff}
-    .project-caption{margin:11px 8px 0;color:var(--muted);font-size:12px;line-height:1.65;text-align:center}
-    .project-section{padding:50px 0;border-top:1px solid var(--line)}
-    .project-section h2{margin:0 0 20px;font-size:25px;letter-spacing:-.7px}
-    .project-section h3{margin:28px 0 10px;font-size:18px;letter-spacing:-.3px}
-    .project-section p{margin:0;color:#4b5563;font-size:15px;line-height:1.85}
-    .project-section p + p{margin-top:14px}
-    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-    .project-card{padding:20px;border:1px solid var(--line);border-radius:12px;background:#fff}
-    .project-card .num{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:1px}
-    .project-card h3{margin:7px 0 7px;font-size:16px}
-    .project-card p{font-size:13px;line-height:1.68}
-    .project-table-wrap{overflow-x:auto;margin-top:22px;border:1px solid var(--line);border-radius:12px}
-    .project-table{width:100%;border-collapse:collapse;min-width:720px;background:#fff}
-    .project-table th,.project-table td{padding:13px 15px;border-bottom:1px solid var(--line);font-size:13px;text-align:left;vertical-align:top}
-    .project-table th{background:#f7f8fa;color:#39414d;font-weight:700}
-    .project-table tr:last-child td{border-bottom:0}
-    .citation-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:14px}
-    .citation-head h2{margin:0}
-    .copy-cite{border:1px solid var(--line);border-radius:8px;background:#fff;padding:8px 12px;color:#555d68;font-size:12px;font-weight:650;cursor:pointer}
-    .copy-cite:hover{color:var(--ink);border-color:#bfc5ce}
-    .bibtex{margin:0;padding:20px 22px;border:1px solid var(--line);border-radius:10px;background:#f6f7f9;font:12px/1.75 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;overflow:visible;overflow-wrap:anywhere;word-break:break-word}
-    @media(max-width:760px){
-      .project-page{padding:52px 18px 60px}
-      .project-subtitle{font-size:16px}
-      .project-grid{grid-template-columns:1fr}
+    .project-page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 76px 24px 86px;
+    }
+
+    .project-hero {
+      text-align: center;
+      padding-bottom: 48px;
+    }
+
+    .project-kicker {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      margin: 0 auto;
+      max-width: 880px;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -2.2px;
+      font-weight: 760;
+    }
+
+    .project-subtitle {
+      margin: 18px auto 0;
+      max-width: 840px;
+      color: #3e4652;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .project-authors {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+
+    .project-authors strong {
+      font-weight: 720;
+    }
+
+    .project-affil {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 650;
+      background: #fff;
+    }
+
+    .project-link.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .project-teaser {
+      margin: 4px 0 56px;
+    }
+
+    .project-teaser img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .project-caption {
+      margin: 11px 8px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .project-section {
+      padding: 50px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .project-section h2 {
+      margin: 0 0 20px;
+      font-size: 25px;
+      letter-spacing: -0.7px;
+    }
+
+    .project-section h3 {
+      margin: 28px 0 10px;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .project-section p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .project-section p + p {
+      margin-top: 14px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .project-card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .project-card .num {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .project-card h3 {
+      margin: 7px 0 7px;
+      font-size: 16px;
+    }
+
+    .project-card p {
+      font-size: 13px;
+      line-height: 1.68;
+    }
+
+    .project-table-wrap {
+      overflow-x: auto;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .project-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      background: #fff;
+    }
+
+    .project-table th,
+    .project-table td {
+      padding: 13px 15px;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .project-table th {
+      background: #f7f8fa;
+      color: #39414d;
+      font-weight: 700;
+    }
+
+    .project-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .citation-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .citation-head h2 {
+      margin: 0;
+    }
+
+    .copy-cite {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 8px 12px;
+      color: #555d68;
+      font-size: 12px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .copy-cite:hover {
+      color: var(--ink);
+      border-color: #bfc5ce;
+    }
+
+    .bibtex {
+      margin: 0;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f6f7f9;
+      font: 12px/1.75 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre-wrap;
+      overflow: visible;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    @media (max-width: 760px) {
+      .project-page {
+        padding: 52px 18px 60px;
+      }
+
+      .project-subtitle {
+        font-size: 16px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
+
 {% include site-header.html %}
 
 <main class="project-page">
+
   <section class="project-hero">
-    <p class="project-kicker">CVSports @ CVPR 2026 · Spotlight</p>
-    <h1 class="project-title">SetPieceRAG</h1>
-    <p class="project-subtitle">Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models</p>
-    <div class="project-authors"><strong>Youngseon Kim</strong> · Jongmin Lee</div>
-    <div class="project-affil">Chung-Ang University</div>
+
+    <p class="project-kicker">
+      CVSports @ CVPR 2026 · Spotlight
+    </p>
+
+    <h1 class="project-title">
+      SetPieceRAG
+    </h1>
+
+    <p class="project-subtitle">
+      Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models
+    </p>
+
+    <div class="project-authors">
+      <strong>Youngseon Kim</strong> · Jongmin Lee
+    </div>
+
+    <div class="project-affil">
+      Chung-Ang University
+    </div>
+
     <div class="project-links">
-      <a class="project-link" href="/assets/img/setpiecerag-poster.png" target="_blank">Poster ↗</a>
-      <a class="project-link" id="setpiecerag-poster-link" href="#poster">Poster ↗</a>
-      <span class="project-link" style="color:#8a919b;background:#f7f8fa;cursor:default;user-select:none;">Code · Coming Soon</span>
+
+      <a
+        class="project-link primary"
+        href="https://openaccess.thecvf.com/content/CVPR2026W/CVsports/html/Kim_SetPieceRAG_Domain-Specific_RAG_for_Knowledge-Intensive_Soccer_VQA_with_Large_Language_CVPRW_2026_paper.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Paper ↗
+      </a>
+
+      <a
+        class="project-link"
+        href="/assets/img/setpiecerag-poster.png"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Poster ↗
+      </a>
+
+      <span
+        class="project-link"
+        style="
+          color: #8a919b;
+          background: #f7f8fa;
+          cursor: default;
+          user-select: none;
+        "
+      >
+        Code · Coming Soon
+      </span>
+
     </div>
   </section>
 
+
   <figure class="project-teaser">
-  <img
-    src="/assets/img/setpiecerag-poster.png"
-    alt="SetPieceRAG CVPR 2026 poster"
-  />
-  <figcaption class="project-caption">
-    SetPieceRAG is a domain-specific retrieval-augmented framework for soccer VQA that combines external knowledge retrieval with task-specific adaptation.
-  </figcaption>
-</figure>
+
+    <img
+      src="/assets/img/setpiecerag-poster.png"
+      alt="SetPieceRAG CVPR 2026 poster"
+    />
+
+    <figcaption class="project-caption">
+      SetPieceRAG is a domain-specific retrieval-augmented framework for soccer VQA
+      that combines external knowledge retrieval with task-specific adaptation.
+    </figcaption>
+
+  </figure>
+
 
   <section class="project-section">
+
     <h2>Abstract</h2>
+
     <p>
-      Visual Question Answering (VQA) in the soccer domain extends beyond simple visual queries and is an important step toward comprehensive sports video understanding.
-      SetPieceRAG is a domain-specific Retrieval-Augmented Generation (RAG) framework tailored for soccer.
-      In addition to the core RAG mechanism, the method incorporates task-specific adaptations including LLM ensembling,
-      LoRA-based domain fine-tuning, super-resolution preprocessing, and object-centric analysis via SAHI.
+      Visual Question Answering (VQA) in the soccer domain extends beyond simple
+      visual queries and is an important step toward comprehensive sports video
+      understanding. SetPieceRAG is a domain-specific Retrieval-Augmented
+      Generation (RAG) framework tailored for soccer. In addition to the core RAG
+      mechanism, the method incorporates task-specific adaptations including LLM
+      ensembling, LoRA-based domain fine-tuning, super-resolution preprocessing,
+      and object-centric analysis via SAHI.
     </p>
+
     <p>
-      For knowledge-intensive queries, SetPieceRAG integrates vision-language tools such as CLIP with external knowledge sources,
-      including a domain-specific corpus (SoccerWiki) and web-search capabilities of Multimodal Large Language Models (MLLMs).
-      This provides non-parametric and long-tail knowledge that is not reliably available in either Large or Small Language Models.
-      By retrieving and injecting the required external knowledge, the framework improves retrieval and answer generation on SoccerNet VQA.
+      For knowledge-intensive queries, SetPieceRAG integrates vision-language
+      tools such as CLIP with external knowledge sources, including a
+      domain-specific corpus (SoccerWiki) and web-search capabilities of
+      Multimodal Large Language Models (MLLMs). This provides non-parametric and
+      long-tail knowledge that is not reliably available in either Large or Small
+      Language Models. By retrieving and injecting the required external
+      knowledge, the framework improves retrieval and answer generation on
+      SoccerNet VQA.
     </p>
+
   </section>
 
+
   <section class="project-section">
+
     <h2>Method</h2>
+
     <p>
       The proposed pipeline separates visual grounding from language generation.
-      A frozen CLIP visual encoder extracts image features, which are normalized and used as query vectors for a FAISS index.
-      The retrieved visual matches are used to identify the target entity, and the corresponding textual knowledge is then supplied to the language model as external context.
+      A frozen CLIP visual encoder extracts image features, which are normalized
+      and used as query vectors for a FAISS index. The retrieved visual matches
+      are used to identify the target entity, and the corresponding textual
+      knowledge is then supplied to the language model as external context.
     </p>
 
     <div class="project-grid">
+
       <article class="project-card">
         <div class="num">01</div>
         <h3>CLIP Visual Encoder</h3>
-        <p>CLIP ViT-B/32 extracts global visual representations from the input image for retrieval rather than direct token-level fusion with an LLM.</p>
+        <p>
+          CLIP ViT-B/32 extracts global visual representations from the input
+          image for retrieval rather than direct token-level fusion with an LLM.
+        </p>
       </article>
+
       <article class="project-card">
         <div class="num">02</div>
         <h3>FAISS Retrieval</h3>
-        <p>L2-normalized visual embeddings are matched against an indexed reference corpus to identify the relevant soccer entity.</p>
+        <p>
+          L2-normalized visual embeddings are matched against an indexed
+          reference corpus to identify the relevant soccer entity.
+        </p>
       </article>
+
       <article class="project-card">
         <div class="num">03</div>
         <h3>Knowledge-Conditioned Generation</h3>
-        <p>The retrieved entity is linked to textual knowledge, which is injected into the language-model prompt together with the question and answer choices.</p>
+        <p>
+          The retrieved entity is linked to textual knowledge, which is injected
+          into the language-model prompt together with the question and answer
+          choices.
+        </p>
       </article>
+
     </div>
 
     <h3>LLM cascade</h3>
+
     <p>
-      The system uses a hierarchical language-model cascade. A local LLaMA 3.2 1B model serves as the first response generator.
-      When the expected answer format is not produced, when retrieved context is unavailable, or when an internal failure occurs,
-      the system falls back to Gemini with Google Search to access up-to-date external information.
-      The final output is normalized into the required answer label format through an extractor module.
+      The system uses a hierarchical language-model cascade. A local LLaMA 3.2
+      1B model serves as the first response generator. When the expected answer
+      format is not produced, when retrieved context is unavailable, or when an
+      internal failure occurs, the system falls back to Gemini with Google Search
+      to access up-to-date external information. The final output is normalized
+      into the required answer label format through an extractor module.
     </p>
+
   </section>
 
+
   <section class="project-section">
+
     <h2>Task-Specific Adaptation</h2>
+
     <p>
-      Because SoccerNet VQA contains heterogeneous tasks, the paper groups them by the capability they require and applies dedicated pipelines rather than a single uniform model.
+      Because SoccerNet VQA contains heterogeneous tasks, the paper groups them
+      by the capability they require and applies dedicated pipelines rather than
+      a single uniform model.
     </p>
 
     <div class="project-table-wrap">
+
       <table class="project-table">
+
         <thead>
-          <tr><th>Category</th><th>Paper configuration</th><th>Target tasks / purpose</th></tr>
+          <tr>
+            <th>Category</th>
+            <th>Paper configuration</th>
+            <th>Target tasks / purpose</th>
+          </tr>
         </thead>
+
         <tbody>
+
           <tr>
-            <td>Vision-Language Foundation & Ensemble</td>
-            <td>Gemini-based multimodal reasoning and LLM ensemble</td>
-            <td>Multi-view foul, jersey-color relevant QA, replay grounding, and text-based QA.</td>
+            <td>
+              Vision-Language Foundation &amp; Ensemble
+            </td>
+            <td>
+              Gemini-based multimodal reasoning and LLM ensemble
+            </td>
+            <td>
+              Multi-view foul, jersey-color relevant QA, replay grounding,
+              and text-based QA.
+            </td>
           </tr>
+
           <tr>
-            <td>Retrieval-Augmented & Knowledge-Integrated</td>
-            <td>RAG with retrieved database context and knowledge extraction</td>
-            <td>Commentary-relevant QA, action classification, and background-image knowledge QA.</td>
+            <td>
+              Retrieval-Augmented &amp; Knowledge-Integrated
+            </td>
+            <td>
+              RAG with retrieved database context and knowledge extraction
+            </td>
+            <td>
+              Commentary-relevant QA, action classification, and
+              background-image knowledge QA.
+            </td>
           </tr>
+
           <tr>
-            <td>Domain-Specific Fine-tuning & Super-Resolution</td>
-            <td>LoRA-based adaptation and super-resolution preprocessing</td>
-            <td>Camera-status tasks and recognition-heavy tasks such as jersey number and score/time QA.</td>
+            <td>
+              Domain-Specific Fine-tuning &amp; Super-Resolution
+            </td>
+            <td>
+              LoRA-based adaptation and super-resolution preprocessing
+            </td>
+            <td>
+              Camera-status tasks and recognition-heavy tasks such as jersey
+              number and score/time QA.
+            </td>
           </tr>
+
           <tr>
-            <td>Specialized Soccer Pipeline</td>
-            <td>Two-stage commentary generation; SAHI + CLIP object-centric analysis</td>
-            <td>Commentary generation and game-state analysis involving multiple small objects and team-color cues.</td>
+            <td>
+              Specialized Soccer Pipeline
+            </td>
+            <td>
+              Two-stage commentary generation; SAHI + CLIP object-centric analysis
+            </td>
+            <td>
+              Commentary generation and game-state analysis involving multiple
+              small objects and team-color cues.
+            </td>
           </tr>
+
         </tbody>
+
       </table>
+
     </div>
+
   </section>
 
+
   <section class="project-section">
+
     <h2>Experimental Setting</h2>
+
     <p>
-      The method is evaluated on SoccerBench and the test/challenge splits of the 2026 SoccerNet Visual Question Answering challenge.
-      SoccerBench covers text, image, and video inputs across 13 soccer-analysis tasks with approximately 10,000 multiple-choice QA pairs.
-      The 2026 challenge adds Game State QA, expanding the benchmark to 14 tasks.
-      Accuracy is used as the evaluation metric following the official challenge protocol.
+      The method is evaluated on SoccerBench and the test/challenge splits of
+      the 2026 SoccerNet Visual Question Answering challenge. SoccerBench covers
+      text, image, and video inputs across 13 soccer-analysis tasks with
+      approximately 10,000 multiple-choice QA pairs. The 2026 challenge adds
+      Game State QA, expanding the benchmark to 14 tasks. Accuracy is used as
+      the evaluation metric following the official challenge protocol.
     </p>
+
     <p>
-      Training and inference were conducted in Google Colab Pro+ with an NVIDIA A100 GPU.
+      Training and inference were conducted in Google Colab Pro+ with an NVIDIA
+      A100 GPU.
     </p>
+
   </section>
 
+
   <section class="project-section">
+
     <h2>What the Paper Demonstrates</h2>
+
     <p>
-      The paper shows that soccer VQA benefits from combining domain-specific retrieval with task-specific adaptation.
-      In particular, external knowledge is used to address knowledge-intensive questions, while LoRA, super-resolution,
-      model ensembling, and object-centric analysis target the distinct bottlenecks of other task categories.
-      The reported experiments demonstrate improved retrieval performance and accurate answer generation on SoccerNet VQA.
+      The paper shows that soccer VQA benefits from combining domain-specific
+      retrieval with task-specific adaptation. In particular, external knowledge
+      is used to address knowledge-intensive questions, while LoRA,
+      super-resolution, model ensembling, and object-centric analysis target the
+      distinct bottlenecks of other task categories. The reported experiments
+      demonstrate improved retrieval performance and accurate answer generation
+      on SoccerNet VQA.
     </p>
+
   </section>
 
+
   <section class="project-section">
+
     <div class="citation-head">
+
       <h2>Citation</h2>
-      <button class="copy-cite" type="button" onclick="copyBibtex(this)">Copy BibTeX</button>
+
+      <button
+        class="copy-cite"
+        type="button"
+        onclick="copyBibtex(this)"
+      >
+        Copy BibTeX
+      </button>
+
     </div>
-    <pre class="bibtex" id="setpiecerag-bibtex">@InProceedings{Kim_2026_CVPR,
+
+    <pre
+      class="bibtex"
+      id="setpiecerag-bibtex"
+    >@InProceedings{Kim_2026_CVPR,
   author    = {Kim, Youngseon and Lee, Jongmin},
   title     = {SetPieceRAG: Domain-Specific RAG for Knowledge-Intensive Soccer VQA with Large Language Models},
   booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
@@ -204,40 +584,28 @@ title: SetPieceRAG
   year      = {2026},
   pages     = {10009--10018}
 }</pre>
+
   </section>
+
 </main>
 
 {% include site-footer.html %}
+
+
 <script>
-  function copyBibtex(button){
-    const text=document.getElementById('setpiecerag-bibtex').innerText;
-    navigator.clipboard.writeText(text).then(function(){
-      const original=button.textContent;
-      button.textContent='Copied!';
-      setTimeout(function(){button.textContent=original;},1400);
+  function copyBibtex(button) {
+    const text = document.getElementById("setpiecerag-bibtex").innerText;
+
+    navigator.clipboard.writeText(text).then(function () {
+      const original = button.textContent;
+
+      button.textContent = "Copied!";
+
+      setTimeout(function () {
+        button.textContent = original;
+      }, 1400);
     });
   }
-</script>
-
-<script>
-  (function () {
-    const parts = Array.from({ length: 7 }, (_, i) =>
-      fetch(`/assets/img/setpiecerag-poster-parts/${i}.txt`).then((response) => {
-        if (!response.ok) throw new Error(`Failed to load poster part ${i}`);
-        return response.text();
-      })
-    );
-
-    Promise.all(parts)
-      .then((chunks) => {
-        const src = "data:image/webp;base64," + chunks.join("");
-        const image = document.getElementById("setpiecerag-poster");
-        const link = document.getElementById("setpiecerag-poster-link");
-        if (image) image.src = src;
-        if (link) link.href = src;
-      })
-      .catch((error) => console.error("Unable to load SetPieceRAG poster:", error));
-  })();
 </script>
 
 </body>
